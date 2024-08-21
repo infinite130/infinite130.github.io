@@ -17,5 +17,6 @@ main_nav: true
 ### 블로그에 대해
 이 블로그는 저의 배움과 생각을 기록하기 위해 만들어졌습니다. 기술적인 글, 개인적인 이야기, 그리고 다양한 주제를 다루고자 합니다.
 
-[github]: https://github.com/infinite130
-[mail]: infiniteto130@gmail.com
+더 궁금한 점이 있다면 [메일](mailto:infiniteto130@gmail.com)로 연락 주세요!
+
+[infinite130's GitHub](https://github.com/infinite130) 
