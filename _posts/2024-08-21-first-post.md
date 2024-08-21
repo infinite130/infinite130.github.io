@@ -2,8 +2,8 @@
 layout: post
 title: "My First Blog Post"
 date: 2024-08-21 12:00:00 +0900
-categories: [jekyll, blog]
-tags: [introduction, jekyll]
+categories: [post]
+tags: [test]
 ---
 
 ## Welcome to my blog!

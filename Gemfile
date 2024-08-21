@@ -6,3 +6,5 @@ gem 'jekyll-paginate-v2'
 gem 'ffi', '~> 1.15.5'
 
 gem "kramdown-parser-gfm", "~> 1.1"
+
+gem "jekyll-paginate", "~> 1.1"

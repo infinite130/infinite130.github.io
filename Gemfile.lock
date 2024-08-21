@@ -32,6 +32,7 @@ GEM
       webrick (>= 1.0)
     jekyll-archives (2.2.1)
       jekyll (>= 3.6, < 5.0)
+    jekyll-paginate (1.1.0)
     jekyll-paginate-v2 (3.0.0)
       jekyll (>= 3.0, < 5.0)
     jekyll-sass-converter (1.5.2)
@@ -74,6 +75,7 @@ DEPENDENCIES
   ffi (~> 1.15.5)
   jekyll (< 4)
   jekyll-archives
+  jekyll-paginate (~> 1.1)
   jekyll-paginate-v2
   jekyll-sitemap
   kramdown-parser-gfm (~> 1.1)

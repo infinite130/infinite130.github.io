@@ -1,5 +1,9 @@
 plugins:
+  - jekyll-paginate
   - jekyll-sitemap
+
+paginate: 5 # 한 페이지에 보여줄 포스트 수
+paginate_path: "/page/:num/"
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://infinite130.github.io" # the base hostname & protocol for your site
