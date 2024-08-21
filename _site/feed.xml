@@ -5,9 +5,34 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 21 Aug 2024 15:44:51 +0900</pubDate>
-    <lastBuildDate>Wed, 21 Aug 2024 15:44:51 +0900</lastBuildDate>
+    <pubDate>Wed, 21 Aug 2024 15:49:33 +0900</pubDate>
+    <lastBuildDate>Wed, 21 Aug 2024 15:49:33 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>My First Blog Post</title>
+        <description>&lt;h2 id=&quot;welcome-to-my-blog&quot;&gt;Welcome to my blog!&lt;/h2&gt;
+
+&lt;p&gt;This is the first paragraph of my new post.&lt;/p&gt;
+
+&lt;h3 id=&quot;subheading&quot;&gt;Subheading&lt;/h3&gt;
+
+&lt;p&gt;Here’s some more information about the topic.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 21 Aug 2024 12:00:00 +0900</pubDate>
+        <link>http://localhost:4000/jekyll/blog/2024/08/21/first-post.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/blog/2024/08/21/first-post.html</guid>
+        
+        <category>introduction</category>
+        
+        <category>jekyll</category>
+        
+        
+        <category>jekyll</category>
+        
+        <category>blog</category>
+        
+      </item>
     
   </channel>
 </rss>
