@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: none
 title: ""
 permalink: /resume/
 main_nav: true
