@@ -7,7 +7,7 @@ paginate_path: "/page/:num/"
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://infinite130.github.io" # the base hostname & protocol for your site
-email: infiniteto130@gmail.com
+email: skfo3219@gmail.com
 
 social:
   - name: GitHub
