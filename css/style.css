@@ -19,14 +19,17 @@
   }
   
   .container {
-    max-width: 700px;   
+    width: 100%;
+    max-width: 1200px; /* 필요에 따라 조정 */
+    height: auto;
+    padding: 20px; /* 필요에 따라 padding 조정 */
+    margin: 0 auto; /* 중앙 정렬 */
     background: #fff;
-    margin: 0px auto 0px; 
     box-shadow: 1px 1px 2px #DAD7D7;
-    border-radius: 3px;  
-    padding: 40px;
+    border-radius: 3px;
     margin-top: 50px;
-  }
+}
+
   
   .header {
     margin-bottom: 30px;
@@ -155,7 +158,10 @@
       }
     }
   }
-  
+  .page-title, .site-header, .main_nav {
+    display: none;
+}
+
   
   
   
