@@ -84,7 +84,7 @@
 	
 
 	
-	<li class="nav-link"><a href="/typography/">Typography</a>
+	<li class="nav-link"><a href="/resume/">Resume</a>
 	
 
 	
@@ -132,15 +132,16 @@
 <article class="post-content">
   <h2 id="git-이란-무엇인가">Git 이란 무엇인가</h2>
 
-<p>Git : VSC(Version Control System)의 한 종류
+<blockquote>
+  <p>Git : VSC(Version Control System)의 한 종류
 프로그램 버전 관리를 위한 툴
-버전(version) : 프로그램의 일부 내용이 바뀌거나 새로운 기능이 추가되는 등 어떤 유의미한 변화가 결과물로 나오는 것
-프로젝트의 시간과 차원을 관리하는 것</p>
+버전(version) : 프로그램의 일부 내용이 바뀌거나 새로운 기능이 추가되는 등 어떤 유의미한 변화가 결과물로 나오는 것 프로젝트의 시간과 차원을 관리하는 것</p>
+</blockquote>
 
-<p>프로젝트 오류를 수정하거나 새 기능을 넣거나 성능을 개선할 때 이전 작업을 취소해야 하는 일들이 생김
+<p>프로젝트 오류를 수정하거나 새 기능을 넣거나 성능을 개선할 때 이전 작업을 취소해야 하는 일들이 생김 <br />
 ex) 버전5에서 추가한 기능에 결함이 있어서 버전 4로 되돌려 다시 작업해야 하는 경우
-깃이 없었을 때는 사용자가 버전마다 일일이 프로그램을 압축해서 백업 파일로 가지고 있다가 문제가 생기면 압축을 푼 후 프로젝트에서 문제가 발생한 지점을 찾아 바꾸고는 했다.
-이런 방식으로 버전을 관리한다면 업데이트할 때마다 모든 버전을 사용자가 일일이 저장해야 하므로 매우 번거롭고, 프로젝트가 진행될수록 각 파일이 차지하는 용량도 어마어마하개 커짐. 그리고 뒤늦게 이전 버전에서 문제가 있는 것을 발견하는 경우도 있음. -&gt; 이전 버전에서 어떤 파일에 무슨 코드를 작업했는지 하나하나 뒤지면서 파일을 복구하는데만 엄청난 시간을 쏟아야 함 
+깃이 없었을 때는 사용자가 버전마다 일일이 프로그램을 압축해서 백업 파일로 가지고 있다가 문제가 생기면 압축을 푼 후 프로젝트에서 문제가 발생한 지점을 찾아 바꾸고는 했다. <br />
+이런 방식으로 버전을 관리한다면 업데이트할 때마다 모든 버전을 사용자가 일일이 저장해야 하므로 매우 번거롭고, 프로젝트가 진행될수록 각 파일이 차지하는 용량도 어마어마하개 커짐. 그리고 뒤늦게 이전 버전에서 문제가 있는 것을 발견하는 경우도 있음. -&gt; 이전 버전에서 어떤 파일에 무슨 코드를 작업했는지 하나하나 뒤지면서 파일을 복구하는데만 엄청난 시간을 쏟아야 함  <br />
 =&gt; git을 사용하면 이런 상황이 발생하지 않음</p>
 
 <p>깃을 사용하면 프로젝트 폴더를 복사할 필요도, 압축해서 백업할 필요도 없음. 깃은 프로젝트의 버전들을 언제든 되돌릴 수 있고 프로젝트 내용들을 여러 모드로 자유롭게 전환하고 변경 사항을 쉽게 이동할 수 있음</p>
@@ -171,23 +172,23 @@ GUI : 프로젝트 상태를 깃에서 자세히 살펴보아야 할때(소스�
 <h3 id="맥용-깃">맥용 깃</h3>
 <p>맥의 경우 보통 깃이 기본적으로 설치되어 있음
 최신버전 확인
-Dock 에서 터미널 열기 
-$ git –version
+Dock 에서 터미널 열기<br />
+<code class="language-plaintext highlighter-rouge">$ git --version</code> <br />
 최신 버전을 https://git-scm.com 에서 확인하고 버전과 다르면 Download for Mac 설치 파일을 다운로드(Homebrew로 설치)
-협업 시 윈도우와 맥에서 Enter/Return 방식 차이에 따른 오류 방지 코드
-$ git config –global core.autocrlf input</p>
+협업 시 윈도우와 맥에서 Enter/Return 방식 차이에 따른 오류 방지 코드<br />
+<code class="language-plaintext highlighter-rouge">$ git config --global core.autocrlf input</code></p>
 
 <h3 id="공통-설치">공통 설치</h3>
 <p>소스트리와 VS Code</p>
 
 <h2 id="git-최초-설정">Git 최초 설정</h2>
 
-<p>깃 사용자 전역 설정
-$ git config –global user.name “사용자이름”
-$ git config –global user.email “사용자이메일”</p>
+<p>깃 사용자 전역 설정<br />
+<code class="language-plaintext highlighter-rouge">$ git config --global user.name "사용자이름"</code><br />
+<code class="language-plaintext highlighter-rouge">$ git config --global user.email "사용자이메일"</code></p>
 
-<p>기본 브랜치이름변경
-$ git config –global init.defaultBranch main</p>
+<p>기본 브랜치이름변경<br />
+<code class="language-plaintext highlighter-rouge">$ git config --global init.defaultBranch main</code></p>
 
 <p>.git 폴더
 깃이 관리하는 프로젝트 내역들이 들어있는 폴더
@@ -195,102 +196,192 @@ $ git config –global init.defaultBranch main</p>
 
 <p>.gitignore 파일 생성하기</p>
 <ol>
-  <li>굳이 프로젝트 관리 대상에 포함할 필요가 없는 파일
+  <li>굳이 프로젝트 관리 대상에 포함할 필요가 없는 파일 <br />
 코드를 입력하고 나서 프로그램을 실행할 때 자동으로 생성되거나 다운로드 되는 파일
 자바의 .class 같은 빌드 결과물 혹은 Node.js를 사용할 때 인터넷에서 다운로드할 수 있는 라이브러리 등
     <blockquote>
       <p>이런 파일들을 .gitignore에 추가해서 업로드 배제하는 이유 : 용량때문에</p>
     </blockquote>
   </li>
-  <li>포함하지 말아야 하는 파일
+  <li>포함하지 말아야 하는 파일 <br />
 서버의 비밀번호
 보안상 민감한 정보</li>
 </ol>
 
 <h2 id="git-명령어">Git 명령어</h2>
 
-<p>$ git init
+<p><code class="language-plaintext highlighter-rouge">$ git init</code> <br />
 깃 관리 시작하기</p>
 
-<p>$ git status
+<p><code class="language-plaintext highlighter-rouge">$ git status</code> <br />
 깃 상태 확인
 현재 폴더의 상황을 깃의 관점으로 보여줌(새로운 파일이 추가되었는데 어떻게 관리해야 할까요?)</p>
 
-<p>$ git add .
+<p><code class="language-plaintext highlighter-rouge">$ git add .</code> <br />
 작업한 모든 파일을 추가</p>
 
-<p>$ git add 특정파일명
+<p><code class="language-plaintext highlighter-rouge">$ git add 특정파일명</code> <br />
 특정파일을 추가</p>
 
-<p>$ git commit 
+<p><code class="language-plaintext highlighter-rouge">$ git commit</code> <br />
 작업물 커밋하기</p>
 
-<p>$ git commit -m ‘(커밋 메시지)’ 
+<p><code class="language-plaintext highlighter-rouge">$ git commit -m '(커밋 메시지)'</code> <br />
 커밋 메시지가 한줄일 때</p>
 
-<p>$ git commit -m ‘(커밋 메시지1)’ -m ‘(커밋 메시지2)’
+<p><code class="language-plaintext highlighter-rouge">$ git commit -m '(커밋 메시지1)' -m '(커밋 메시지2)'</code> <br />
 커밋 메시지가 두줄일 때</p>
 
-<p>$ git commit -am “(커밋 메시지)”
+<p><code class="language-plaintext highlighter-rouge">$ git commit -am "(커밋 메시지)"</code> <br />
 git add와 git commit을 한번에 처리하기
 단, -am은 새로 추가된(untracked) 파일이 없을 때만 쓸 수 있음</p>
 
-<p>$ git log
+<p><code class="language-plaintext highlighter-rouge">$ git log</code> <br />
 프로젝트 변경 히스토리 확인</p>
 
-<p>$ git diff
+<p><code class="language-plaintext highlighter-rouge">$ git diff</code> <br />
 프로젝트 변경사항을 구체적으로 보여주는 명령어</p>
 
-<p>$ git rest –hard 복사된해시값
+<p><code class="language-plaintext highlighter-rouge">$ git rest --hard 복사된해시값</code> <br />
 작업을 복사된해시값 이전 순서로 되돌림
 해시값 -&gt; $ git log commit 다음 부분 항목에 있는 문자열
 –hard 옵션은 파일까지 완전히 삭제하기 때문에 사용시 주의해야함</p>
 
-<p>$ git revert 복사된해시값
+<p><code class="language-plaintext highlighter-rouge">$ git revert 복사된해시값</code> <br />
 과거 내역 되돌리기(리셋)
 복사된 해시값 =&gt; 내가 돌아갈 시점의 커밋 해시값</p>
 
 <h3 id="서로-충돌하는-작업-내역-리버트하기">서로 충돌하는 작업 내역 리버트하기</h3>
 <p>작업 내역을 그냥 삭제하는 리셋과 달리 리버트는 내가 뭘 취소했는지를 작업 내역에 더하기 때문에 작업 내역을 더욱 자세히 알 수 있다</p>
 
-<p>$ git rm 파일삭제
+<p><code class="language-plaintext highlighter-rouge">$ git rm 파일삭제</code> <br />
 git revert 로 충돌되는 작업물의 해시값을 붙여 넣고 ‘hint:’의 내용을 실행하면됨
 파일을 삭제하고 싶을 때 git rm 명령어로 파일을 삭제하고 충돌을 해결</p>
 
-<p>$ git revert –continue
+<p><code class="language-plaintext highlighter-rouge">$ git revert --continue</code> <br />
 충돌로 인해 중단되어 있는 revert 작업을 재개한다는 의미</p>
 
-<p>$ git branch
+<p><code class="language-plaintext highlighter-rouge">$ git branch</code> <br />
 현재 가지고 있는 브랜치 목록 확인</p>
 
-<p>$ git branch 새브랜치명
+<p><code class="language-plaintext highlighter-rouge">$ git branch 새브랜치명</code> <br />
 브랜치 추가</p>
 
-<p>$ git switch 브랜치명
+<p><code class="language-plaintext highlighter-rouge">$ git switch 브랜치명</code> <br />
 ‘브랜치명’으로 브랜치 이동</p>
 
-<p>$ git switch -c 새브랜치명
+<p><code class="language-plaintext highlighter-rouge">$ git switch -c 새브랜치명</code> <br />
 새브랜치 생성과 브랜치 이동 동시에 진행</p>
 
-<p>$ git branch -m 기존브랜치명 새브랜치명
+<p><code class="language-plaintext highlighter-rouge">$ git branch -m 기존브랜치명 새브랜치명</code> <br />
 브랜치이름 변경</p>
 
-<p>$ git branch -d 삭제할브런치명
+<p><code class="language-plaintext highlighter-rouge">$ git branch -d 삭제할브런치명</code> <br />
 브런치 삭제</p>
 
-<p>$ git log –all –decorate –online –graph
+<p><code class="language-plaintext highlighter-rouge">$ git log --all --decorate --online --graph</code> <br />
 터미널 창에서 브랜치 작업 내역 시각적으로 확인하는 방법</p>
 
 <h3 id="merge-와-rebase">merge 와 rebase</h3>
+<p>main 브랜치로부터 생성된 브랜치는 수정한 내용이 모두 채택되면 main 브랜치로 합침. 이 때 브랜치를 합치는 방법 두 가지 : merge &amp; rebase</p>
+
+<h4 id="merge">merge</h4>
+<p>브랜치를 병합하여 하나의 새로운 커밋을 만드는 것
+브랜치 두 가지를 이어 붙이는 것 = 커밋 하나가 더 생성됨</p>
+
+<h4 id="rebase">rebase</h4>
+<p>현재 브랜치에서 다른 브랜치의 변경 사항을 가져와 커밋을 재정렬 하는 것
+브랜치를 다른 브랜치에 옮겨 붙이는 것 = 브랜치의 커밋을 다른 브랜치로 옮겨 붙이는 것</p>
+<blockquote>
+  <p>이전 브랜치에서 커밋한 내용이 그대로 main 브랜치에 생성됨(test라는 브랜치에서 main 브랜치로 rebase 하고 test에 생성된 커밋이 3개일 때 main 브랜치에 test 브랜치의 커밋 3개가 추가됨)</p>
+</blockquote>
+
+<p><strong><em>merge 와 rebase의 차이</em></strong></p>
+<ol>
+  <li>작업 내역이 다르게 처리된다 <br />
+리베이스 방식을 사용하면 작업 내역이 한 줄로 정리되지만, 머지는 브랜치의 흔적을 남김. 머지의 경우 많은 브랜치가 사용되는 프로젝트에서는 프로젝트의 진행 내역을 파악하기가 복잡하다.</li>
+  <li>코드 충돌 여부 <br />
+이미 팀원들 간에 공유된 커밋에 대해서 리베이스를 사용하지 않는 게 좋다. 한 팀원이 임의로 다른 팀원의 작업 내역을 이어 붙이면 각자의 코드가 충돌할 수 있음</li>
+</ol>
+
+<p>진행하는 프로젝트의 성격에 따라 브랜치 사용 내역을 남겨 둘 필요가 있다면 <strong>merge</strong>를 쓰는 것이 좋고, 작업 내역을 깔끔하게 만드는 게 중요하다면 <strong>rebase</strong>가 더 적절한 선택이다.</p>
+
+<h4 id="merge로-브랜치-병합하기">merge로 브랜치 병합하기</h4>
+
+<p><code class="language-plaintext highlighter-rouge">$ git switch main</code> <br />
+main 브랜치로 이동<br />
+<code class="language-plaintext highlighter-rouge">$ git merge 브랜치명</code> <br />
+main qmfoscldp 합칠 대상 브랜치명 입력<br />
+<code class="language-plaintext highlighter-rouge">$ git branch -d 브랜치명</code> <br />
+merge후 불필요한 브랜치 삭제<br />
+<code class="language-plaintext highlighter-rouge">$ git branch</code> <br />
+현재 브랜치 확인</p>
+
+<h4 id="rebase로-브랜치-병합하기">rebase로 브랜치 병합하기</h4>
+<p><code class="language-plaintext highlighter-rouge">$ git switch 브랜치명</code> <br />
+rebase할 브랜치로 이동<br />
+<code class="language-plaintext highlighter-rouge">$ git rebase main</code> <br />
+main에 rebase 하기<br />
+<code class="language-plaintext highlighter-rouge">$ git switch main</code> <br />
+main 브랜치로 변경<br />
+<code class="language-plaintext highlighter-rouge">$ git merge 브랜치명</code> <br />
+main 브랜치를 ‘브랜치명’ 위치로 옮김<br />
+<code class="language-plaintext highlighter-rouge">$ git branch -d 브랜치명</code> <br />
+merge후 불필요한 브랜치 삭제<br />
+<code class="language-plaintext highlighter-rouge">$ git branch</code> <br />
+현재 브랜치 확인</p>
+
+<h2 id="브랜치-간-충돌-해결하기">브랜치 간 충돌 해결하기</h2>
+
+<h4 id="충돌이-일어나는-이유">충돌이 일어나는 이유</h4>
+<p>서로 다른 브랜치에서 같은 파일을 수정하고 병합하려고 할 때 <br />
+컴퓨터는 서로 다른 변경 사항 중에서 어떤 걸 채택해야 될 지 모르기 때문에 충돌이 발생함</p>
+
+<p>충돌된 파일 중 선택할 코드 정하고 다시 merge 하기</p>
+
+<p><code class="language-plaintext highlighter-rouge">$ git merge --abort</code> <br />
+머지 중단 시</p>
 
 <h4 id="순서">순서</h4>
-<p>$ git add .
-$ git status
-$ git commit -m “커밋메시지”
-$ git log
-$ git push</p>
+<p><code class="language-plaintext highlighter-rouge">$ git add .</code><br />
+<code class="language-plaintext highlighter-rouge">$ git status</code><br />
+<code class="language-plaintext highlighter-rouge">$ git commit -m "커밋메시지"</code><br />
+<code class="language-plaintext highlighter-rouge">$ git log</code><br />
+<code class="language-plaintext highlighter-rouge">$ git push</code>
+<br /></p>
 
-<h2 id="git에서-제공하는-개발-협업을-위한-기능들">Git에서 제공하는 개발 협업을 위한 기능들</h2>
+<h2 id="github">GitHub</h2>
+<p>코드 공유 및 협업 서비스 <br />
+깃으로 관리하는 모든 프로젝트를 온라인 공간에 공유해서 프로젝트 구성원들이 함께 소프트웨어를 만들어 갈 수 있도록 도와준다</p>
+
+<h3 id="일반-클라우드-서비스-말고-깃허브를-이용하는-이유">일반 클라우드 서비스 말고 깃허브를 이용하는 이유</h3>
+<p>클라우드는 보통 한 번에 한 명씩만 프로젝트에 접근할 수 있고, 많은 팀원이 협업하는데 적절하지 않음 <br />
+클라우드 이용 시 다른 팀원이 수정 후 업로드한 파일을 복원할 방법이 없음</p>
+
+<blockquote>
+  <p>깃허브와 같은 온라인 깃 저장소는 모든 업로드와 다운로드를 커밋 단위로 주고 받는다. 한 사람이 먼저 작업하고 커밋해서 버전을 만들고 업로드하면 깃허브상의 프로젝트는 해당 버전으로 최신화 된다. 다른 사람이 자신의 작업을 올리기 위해서는 반드시 깃허브의 최신 커밋을 먼저 다운로드해서 자기 컴퓨터에 있는 프로젝트에 적용하도록 강제된다.</p>
+</blockquote>
+
+<blockquote>
+  <p>구성원이 각자 동시에 작업하되 각자의 작업을 공유 공간에 올릴 때는 깃허브가 중간에서 정리를 해줌으로서 다른 사람의 작업을 덮어씌우거나 충돌할 걱정 없이 편하게 협업할 수 있음</p>
+</blockquote>
+
+<h4 id="github-repository원격-저장소-처음-만들었을-때">github repository(원격 저장소) 처음 만들었을 때</h4>
+
+<p><code class="language-plaintext highlighter-rouge">$ git remote add origin 원격저장소주소</code> <br />
+원격 저장소 추가<br />
+<code class="language-plaintext highlighter-rouge">$ git branch -M main</code> <br />
+프로젝트의 기본 브랜치 이름을 main으로 바꿈<br />
+<code class="language-plaintext highlighter-rouge">$ git push -u origin main</code> <br />
+현재 브랜치가 원격 저장소의 어떤 브랜치와 연동될지 지정 <br />
+<strong>push</strong>란? 내 컴퓨터에 있는 커밋 내역 중에서 아직 원격 저장소에 없는 커밋을 업로드한다</p>
+
+<p><code class="language-plaintext highlighter-rouge">$ git remote</code> <br />
+해당 프로젝트와 연결된 원격 저장소의 목록 확인<br />
+<code class="language-plaintext highlighter-rouge">$ git remote -v</code> <br />
+저장소 주소도 확인할 수 있음</p>
+
+<h4 id="원격저장소-프로젝트-저장하기">원격저장소 프로젝트 저장하기</h4>
 
 <h3 id="참고">참고</h3>
 <p>&lt;알코의 TOO MUCH 친절한 깃&amp;깃허브&gt;</p>
@@ -351,7 +442,7 @@ $ git push</p>
 	
 
 	
-	<li class="nav-link"><a href="/typography/">Typography</a>
+	<li class="nav-link"><a href="/resume/">Resume</a>
 	
 
 	
