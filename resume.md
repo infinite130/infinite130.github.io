@@ -1,6 +1,6 @@
 ---
 layout: none
-title: ""
+title: "Resume"
 permalink: /resume/
 main_nav: true
 ---
