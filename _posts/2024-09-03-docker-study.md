@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What Is Docker?"
-date: 2024-09-02 10:00:00 +0900
+date: 2024-09-03 10:00:00 +0900
 categories: [post]
 tags: [computer science]
 ---
@@ -186,10 +186,10 @@ Docker와 가상 머신의 차이점은?
 Docker는 컨테이너화 플랫폼 및 런타임이며 Kubernetes는 여러 컨테이너 런타임에서 컨테이너를 실행하고 관리하기 위한 플랫폼임. Kubernetes는 Docker를 포함한 수많은 컨테이너 런타임을 지원한다.
 
 ### 참고
-[도커 홈페이지] (https://www.docker.com/)   
-[Docker란 무엇입니까?] (https://aws.amazon.com/ko/docker/)   
-[Kubernetes와 Docker 비교] (https://www.atlassian.com/ko/microservices/microservices-architecture/kubernetes-vs-docker)   
-[Docker란 무엇인가?] (https://www.oracle.com/kr/cloud/cloud-native/container-registry/what-is-docker/)   
-[도커 컨테이너와 이미지란?] (https://hoon93.tistory.com/48)   
-[컨테이너와 가상 머신의 차이점은 무엇인가요?] (https://aws.amazon.com/ko/compare/the-difference-between-containers-and-virtual-machines/)    
 
+[도커 홈페이지](https://www.docker.com/)   
+[Docker란 무엇입니까?](https://aws.amazon.com/ko/docker/)   
+[Kubernetes와 Docker 비교](https://www.atlassian.com/ko/microservices/microservices-architecture/kubernetes-vs-docker)   
+[Docker란 무엇인가?](https://www.oracle.com/kr/cloud/cloud-native/container-registry/what-is-docker/)   
+[도커 컨테이너와 이미지란?](https://hoon93.tistory.com/48)   
+[컨테이너와 가상 머신의 차이점은 무엇인가요?](https://aws.amazon.com/ko/compare/the-difference-between-containers-and-virtual-machines/)
