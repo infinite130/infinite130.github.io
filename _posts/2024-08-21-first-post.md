@@ -8,3 +8,6 @@ tags: [test]
 
 #### 크롬 개발자 모드 콘솔창 열기
 ```option+command+i```
+
+### 단축키 모음
+rr
