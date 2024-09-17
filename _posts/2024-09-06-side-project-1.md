@@ -6,6 +6,8 @@ categories: [post]
 tags: [project]
 ---
 
+
+
 ### 사이드 프로젝트의 필요성
 
 5개월간 Java 국비 수업을 들으면서 프로젝트를 2개 진행했지만, 개발의 전체적인 흐름을 이해하기 무리가 있었다.   
@@ -77,6 +79,19 @@ new : 이전에 사용해보지 않았던 기술을 새롭게 사용함
 
 ### 기술 스택 (계획)
 
+마이그레이션을 진행할 프로젝트(SML)의 개발 환경은 다음과 같다.
+
+> Java11
+> eclipse
+> Spring Framework 5.3.9
+> Tomcat 9.0
+> Maven
+> HikariCP
+> MyBatis
+> Oracle sqldeveloper
+> Junit
+> JSP
+
 요약한 기술 스택은 아래와 같다    
 
 | 분류               | 기술                             |
@@ -86,7 +101,7 @@ new : 이전에 사용해보지 않았던 기술을 새롭게 사용함
 | IDE    | IntelliJ                |
 | 빌드 도구          | Gradle                   |
 | ORM               | JPA                              |
-| 웹 서버            | Tomcat                           |
+| 웹 서버            | Spring Boot 내장 Tomcat                           |
 | 프론트엔드 라이브러리 | React                        |
 | 데이터베이스        | MySQL                            |
 | 테스트             | JUnit                            |

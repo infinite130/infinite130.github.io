@@ -6,6 +6,8 @@ categories: [post]
 tags: [project]
 ---
 
+### Spring Framework 에서 Spring Boot 로 마이그레이션하기
+
 #### 새 프로젝트 만들기
 
 IntelliJ   
