@@ -33,111 +33,99 @@ main_nav: true
       </span>
     </div>
   </div>
-   <div class="details">
-    <div class="section">
-      <div class="section">
-      <div class="section__title">Projects</div> 
-       <div class="section__list">
-         <div class="section__list-item">
-           <div class="name">DSP</div>
-           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
-         </div>
-         
-         <div class="section__list-item">
-                    <div class="name">DSP</div>
-           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
-           </div>
-         </div>
-       </div>
-    </div>
-     <div class="section">
-       <div class="section__title">Skills</div>
-       <div class="skills">
-         <div class="skills__item">
-           <div class="left"><div class="name">
-             Javascript
-             </div></div>
-           <div class="right">
-
-           </div>
-         </div>
-         
-       </div>
-       <div class="skills__item">
-           <div class="left"><div class="name">
-             CSS</div></div>
-           <div class="right">
-                       
-           </div>
-         </div>
-         
-       </div>
-     <div class="section">
-     <div class="section__title">
-       Interests
-       </div>
-       <div class="section__list">
-         <div class="section__list-item">
-                  Football, programming.
-          </div>
-       </div>
-     </div>
-     </div>
-
-      <div class="section__title">Experience</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">KlowdBox</div>
-            <div class="addr">San Fr, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-                <div class="section__list-item">
-          <div class="left">
-            <div class="name">Akount</div>
-            <div class="addr">San Monica, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-
+   <<div class="details">
+  <div class="section">
+    <div class="section__title">Projects</div> 
+    <div class="section__list">
+      <div class="section__list-item">
+        <div class="name">DSP</div>
+        <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
+      </div>
+      <div class="section__list-item">
+        <div class="name">DSP</div>
+        <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a></div>
       </div>
     </div>
-    <div class="section">
-      <div class="section__title">Education</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">Sample Institute of technology</div>
-            <div class="addr">San Fr, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
+  </div>
+  
+  <div class="section">
+    <div class="section__title">Skills</div>
+    <div class="skills">
+      <div class="skills__item">
+        <div class="left">
+          <div class="name">Javascript</div>
         </div>
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">Akount</div>
-            <div class="addr">San Monica, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-
+        <div class="right"></div>
       </div>
-      
-   
+      <div class="skills__item">
+        <div class="left">
+          <div class="name">CSS</div>
+        </div>
+        <div class="right"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <div class="section__title">Interests</div>
+    <div class="section__list">
+      <div class="section__list-item">Football, programming.</div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <div class="section__title">Experience</div>
+    <div class="section__list">
+      <div class="section__list-item">
+        <div class="left">
+          <div class="name">KlowdBox</div>
+          <div class="addr">San Fr, CA</div>
+          <div class="duration">Jan 2011 - Feb 2015</div>
+        </div>
+        <div class="right">
+          <div class="name">Fr developer</div>
+          <div class="desc">did This and that</div>
+        </div>
+      </div>
+      <div class="section__list-item">
+        <div class="left">
+          <div class="name">Akount</div>
+          <div class="addr">San Monica, CA</div>
+          <div class="duration">Jan 2011 - Feb 2015</div>
+        </div>
+        <div class="right">
+          <div class="name">Fr developer</div>
+          <div class="desc">did This and that</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <div class="section__title">Education</div>
+    <div class="section__list">
+      <div class="section__list-item">
+        <div class="left">
+          <div class="name">Sample Institute of Technology</div>
+          <div class="addr">San Fr, CA</div>
+          <div class="duration">Jan 2011 - Feb 2015</div>
+        </div>
+        <div class="right">
+          <div class="name">Fr developer</div>
+          <div class="desc">did This and that</div>
+        </div>
+      </div>
+      <div class="section__list-item">
+        <div class="left">
+          <div class="name">Akount</div>
+          <div class="addr">San Monica, CA</div>
+          <div class="duration">Jan 2011 - Feb 2015</div>
+        </div>
+        <div class="right">
+          <div class="name">Fr developer</div>
+          <div class="desc">did This and that</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
