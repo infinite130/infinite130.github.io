@@ -16,6 +16,13 @@ File -> New Project -> Spring Boot
 인텔리제이에서 위 순서대로 새로운 프로젝트를 선택  우측 하단에 ```NEXT```
 
 
+#### react 연결
+
+
+
+#### mysql 연동 및 jpa 
+
+
 
 ### 오류 기록
 
