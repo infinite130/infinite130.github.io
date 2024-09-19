@@ -1,7 +1,7 @@
 ---
 layout: none
-title: "Resume"
-permalink: /resume/
+title: "Portfolio"
+permalink: /portfolio/
 main_nav: true
 ---
 

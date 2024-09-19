@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>What Is Docker?</title>
+  <meta name="description" content="Docker란 무엇인가">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/post/2024/09/03/docker-study.html">
+	<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <span></span>
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+	<li class="nav-link"><a href="/books/">Books</a>
+	
+
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+	<li class="nav-link"><a href="/resume/">Resume</a>
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">What Is Docker?</h1>
+      <p class="info">by <strong></strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">September 3, 2024</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/posts/#post">Post</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h2 id="docker란-무엇인가">Docker란 무엇인가</h2>
+
+<p>Docker는 배포 방식이 가상 머신(VM) 배포에서 컨테이너 배포로 넘어가면서 오픈소스 플랫폼이다.</p>
+
+<p>컨테이너는 애플리케이션의 코드, 라이브러리 및 기타 종속 구성 요소를 포함하는 소프트웨어 코드 패키지이다. 컨테이너화를 통해 애플리케이션을 이동 가능하도록 만들어 모든 디바이스에서 동일한 코드를 실행할 수 있다. <br />
+가상 머신은 물리적 머신의 디지털 사본이다. 동일한 호스트 운영 체제에서 고유한 개별 운영 체제가 실행되는 여러 가상 머신을 보유할 수 있다. 또한 애플리케이션을 실행하는 데 필요한 모든 것이 포함된 가상 머신을 생성할 수 있다.</p>
+
+<p>컨테이너와 가상 머신은 모두 배포 기술이다. 소프트웨어 개발 수명 주기에서 배포는 서버 또는 디바이스에서 애플리케이션을 효율적으로 실행하는 매커니즘이다. 애플리케이션에는 서버의 기본 운영 체제와 밀접한 관련이 있는 종속 구성 요소라는 몇 가지 추가 소프트웨어 구성 요소가 필요하다. 애플리케이션 코드와 물리적 디바이스 사이의 이러한 모든 소프트웨어 계층을 애플리케이션 환경 이라고 한다.</p>
+
+<p>일반적으로 조직에서 새로운 기능을 릴리스하려면 그 전에 먼저 Linux 환경에서 개발하고 Windows에서 테스트하는 등 여러 환경에서 애플리케이션을 구현해야 한다. 환경 간에 애플리케이션을 이전하면 버그와 결함이 발생하여 종속 구성 요소 누락으로 인해 생산성이 저하될 수 있다. 게다가, 한 환경에서만 애플리케이션을 구축하고 테스트하면 애플리케이션의 유용성이 제한된다.</p>
+<ul>
+  <li>여러 운영 체제를 사용하는 사용자를 위해 다른 버전을 개발해야 할 수 있음</li>
+  <li>시스템 관리자는 모든 환경을 균일하게 업데이트하고 유지 관리해야 하므로 개발 비용이 상승함</li>
+  <li>온프레미스 데이터 센터에서 클라우드로 또는 여러 클라우드 환경 간에 애플리케이션을 이전하기가 어려울 수 있음</li>
+</ul>
+
+<p>가상 머신의 용도 <br />
+가상 머신 기술은 증가하는 물리적 하드웨어 용량과 처리 성능을 효율적으로 사용하기 위해 개발되었다. 단일 물리적 서버에서 단일 애플리케이션 환경을 실행하면 하드웨어 리소스의 활용도가 낮아진다. 가상 머신을 사용하면 조직에서 여러 운영 체제를 설치하고 동일한 물리적 시스템에 여러 환경을 구축할 수 있다 <br />
+컨테이너의 용도 <br />
+컨테이너는 여러 환경에서 예측 가능하고 반복 가능한 방식으로 애플리케이션을 패키징하고 실행하기 위해 개발되었다. 환경을 재구축하는 대신 모든 유형의 물리적 또는 가상 환경에서 실행되도록 애플리케이션을 패키징했던 것이다. 마치 우주 비행사가 다른 행성을 탐사할 때 지구의 대기를 재현하는 것이 아니라 우주복을 입는 것과 비슷하다.</p>
+
+<p>컨테이너와 가상머신의 유사성 <br />
+컨테이너와 가상 머신을 사용하면 거러 환경에서 실행할 수 있도록 애플리케이션을 완전히 격리할 수 있다. 컨테이너와 가상 머신은 기본 인프라를 가상화하거나 추상화하므로 사용자가 신경 쓸 필요가 없다. 또한 소프트웨어 인프라를 이미지 파일이라는 단일 파일로 패키징할 수 있도록 해준다. 이미지 파일을 사용하여 어디서나 애플리케이션을 신속하게 설정하고 실행할 수 있다. 소프트웨어 프로세스를 사용하여 시스템 구성을 관리하거나 수천 개의 애플리케이션을 한 번에 관리하도록 확장할 수 있다. 단, 컨테이너 및 가상 머신의 역할과 사용 범위는 애플리케이션이 배포되는 위치와 방법에 따라 달라진다.</p>
+
+<p>컨테이너아와 가상머신의 주요 차이점 <br />
+컨테이너는 운영 체제를 가상화하여 애플리케이션이 모든 플랫폼에서 독립적으로 실행될 수 있도록 한다. 가상 머신은 그 이상의 기능을 제공하여 물리적 시스템을 가상화할 수 있도록 한다. 따라서 하드웨어 리소스를 효율적으로 사용할 수 있게 된다. <br />
+주요 차이점 <br />
+작동 방식 : <br />
+컨테이너 기술에는 실행 중인 시스템에 관계없이 일관되게 수행되는 자급자족 소프트웨어 패키지를 빌드하는 작업이 포함된다. 소프트웨어 개발자는 컨테이너 이미지, 즉 애플리케이션을 실행하는 데 필요한 정보가 들어 있는 파일을 만들고 배포한다. 컨테이너 이미지는 읽기 전용이며 컴퓨터 시스템에서 변경할 수 없다.</p>
+
+<p>가상 머신 기술에는 물리적 서버 또는 컴퓨터에 가상화 소프트웨어를 설치하는 작업이 포함된다. 이 물리적 컴퓨터를 호스트 컴퓨터라고 하며 가상 머신을 게스트라고 한다. 호스트 운영 체제에 영향을 미치지 않으면서 필요에 따라 게스트 운영 체제와 그 애플리케이션을 구성하고 업데이트할 수 있다.</p>
+
+<p>핵심기술 :  <br />
+가상 머신은 게스트 운영 체제와 호스트 운영 체제 간에 통신하는 하이퍼바이저를 사용한다. 이 하이퍼바이저가 리소스 공유를 조정하므로 가상 머신은 동일한 하드웨어에서 여러 개의 다른 가상 머신과 함께 독립적으로 실행된다.</p>
+
+<p>반면, 컨테이너는 컨테이너 엔진 또는 컨테이너 런타임을 사용한다. 컨테이너 엔진은 컨테이너와 운영 체제 간의 중개 에이전트 역할을 하며 애플리케이션에 필요한 시스템 리소스를 제공하고 관리합니다. 도커는 가장 인기 있는 오픈 소스 컨테이너 엔진이다.</p>
+
+<p>크기 :  <br />
+가상 머신 이미지 파일에는 자체 운영 체제가 포함되어 있으므로 크기가 더 크다. 리소스가 증가하면 전체 서버, 데이터베이스, 데스크톱 및 네트워크를 복제, 분할, 추상화, 에뮬레이트할 수 있다. 컨테이너 파일은 더 가볍고 MB 단위이다. 컨테이너는 단일 애플리케이션을 실행하는 데 필요한 리소스만 패키징한다.</p>
+
+<p>컨케이너를 사용하는 경우와 가상 머신을 사용하는 경우  <br />
+애플리케이션 배포를 위해 가상 머신과 컨테이너 중 하나를 선택할 때 고려해야 할 몇 가지 요소</p>
+
+<p>환경 구성 :  <br />
+가상 머신은 개발자에게 애플리케이션 환경에 대한 제어 권환을 더 많이 부여한다. 즉 개발자가 수동으로 시스템 소프트웨어를 설치하고, 구성 상태에 대한 스냅샷을 생성하고, 필요한 경우 이전 상태로 복원할 수 있다. 애플리케이션의 성능을 개선하기 위해 아이디어, 실험 또는 다른 환경을 테스트하는 데 유용하다.</p>
+
+<p>컨테이너는 최상의 구성이 선택된 후에 구성에 대한 정적 정의를 제공한다</p>
+
+<p>소프트웨어 개발 속도 :  <br />
+가상 머신은 풀 스택 시스템이므로 구축하고 재생성하는 데 시간이 많이 걸릴 수 있다. 환경을 재생성해야 하기 때문에 수정 내용을 검증하는 데 시간이 많이 걸린다.</p>
+
+<p>새 기능을 자주 빌드, 테스트 및 릴리스하려면 컨테이너를 사용하는 것이 좋다. 고급 소프트웨어만 포함되어 있기 때문에 수정하고 반복하는 속도가 매우 빠르다.</p>
+
+<p>확장성 :   <br />
+가상 머신은 스토리지 공간을 더 많이 차지하므로 온프레미스 데이터 센터에 더 많은 하드웨어를 프로비저닝 해야한다. 클라우드 인스턴스로 전환하며 비용이 절감되지만 전체 환경을 마이그레이션하는 데 있어서 해결해야 할 고유 문제가 있다.</p>
+
+<p>컨테이너는 더 적은 공간을 차지하고 확장하기가 더 쉽다. 더 중요한 것은 컨테이너가 마이크로서비스를 사용할 수 있게 함으로써 사용자에게 애플리케이션 확장성에 대한 세부적인 제어 권환을 부여한다는 것이다. 마이크로서비스는 잘 정의된 API를 통해 통신하는 소규모 독립 서비스로 구성된 소프트웨어 개발을 위한 아키텍처 및 조직적 접근 방식이다. 컨테이너를 사용하면 필요에 따라 개별 마이크로 서비스를 확장할 수 있다.</p>
+
+<p>대표적인 컨테이너 기술 <br />
+애플리케이션 코드를 컨테이너로 패키징해서 개발에서 운영 환경으로 배포</p>
+
+<p>환경에 구애받지 않음</p>
+
+<p>각 컨테이너는 독립적으로 실행되므로 다양한 애플리케이션과 서비스를 하나의 시스템에서 격리된 상태로 실행할 수 있다</p>
+
+<p>VM과 같은 기능이지만 훨씬 가벼움</p>
+
+<p>도커 엔진에서 사용하는 기본 단위는 이미지와 컨테이너이며 이 두가지가 도커의 핵심이다</p>
+
+<p>도커 이미지 : 이미지는 컨테이너를 생성하기 위해 필요한 설계도. 도커는 이미지를 보고 컨테이너를 생성하게 된다.</p>
+
+<p>컨테이너를 정의하는 읽기 전용 템플릿. 코드에 필요한 라이브러리 및 종속성에 대한 정의를 비롯해 실행되는 코드가 포함되어 있음.</p>
+
+<p>이미지 : 서비스환경(서비스 인프라) 부분을 이미지(실행파일화) 하여 배포 <br />
+특정 프로세스를 실행하기 위한(즉, 컨테이너 생성-실행-에 필요한) 모든 파일과 설정값(환경)을 지닌 것으로, 더 이상의 의존성 파일을 컴파일하거나 이것저것 설치할 필요 없는 상태의 파일 <br />
+도커 이미지의 용량은 보통 수백MB~수GB가 넘는다. 하지만 가상머신(VM)의 이미지에 비하면 굉장히 적은 용량이다 <br />
+이미지는 상태 값을 가지지 않고 변하지 않는다 <br />
+하나의 이미지는 여러 컨테이너를 생성할 수 있고 컨테이너가 삭제되더라도 이미지는 변하지 않고 그대로 남아있다 <br />
+도커 이미지들은 github와 유사한 서비스인 DockerHub를 통해 버전 관리 및 배포(push&amp;pull)가 가능하다 <br />
+다양한 API가 제공되어 원하는 만큼 자동화가 가능하다 <br />
+도커는 Dockerfile이라는 파일로 이미지를 만든다. Dockerfile에는 소스와 함께 의존성 패키지 등 사용했던 설정 파일을 버전 관리하기 쉽도록 명시되어진다(그래서 누구나 생성과정을 확인할 수 있으며 수정도 할 수 있다)</p>
+
+<blockquote>
+  <p>Docker란? <br />
+애플리케이션을 신속하게 구축, 테스트 및 배포할 수 있는 소프트웨어 플랫폼</p>
+</blockquote>
+
+<p>Docker를 이용하면 간단한 명령으로 컨테이너 이미지를 만들고 도커 허브와 같은 저장소에 저장할 수 있다. 그리고 도커를 설치한 호스트에 해당 컨테이너 이미지를 다운로드해서 컨테이너를 실행할 수 있다.</p>
+
+<p>Docker 컨테이너는 애플리케이션의 모든 코드 및 종속성을 표준 형식으로 패키징할 수 있게 해주는 컨테이너이다. 이를 통해 애플리케이션이 컴퓨팅 환경 전반에서 빠르고 안정적으로 실행될 수 있다. Docker 컨테이너는 라이브러리, 시스템 도구, 코드, 런타임 등 애플리케이션 실행에 필요한 모든 것을 담고 있는 인기 있는 경량의 독립형 실행 컨테이너이다. Docker는 개발자가 컨테이너화된 애플리케이션을 빠르게 빌드, 테스트 및 배포할 수 있게 해주는 소프트웨어 플랫폼이기도 하다.</p>
+
+<p>Docker는 이제 표준화된 런타임 환경으로 자리잡았다.</p>
+
+<p>Docker는 컨테이너화 플랫폼 및 런타임</p>
+
+<p>2013년 Docker가 공개되면서 컨테이너의 시대가 시작되었다.</p>
+
+<p>컨테이너는 자체 운영 체제에 의존하지 않으므로 팀이 애플리케이션, 종속성 및 구성을 컨테이너 이미지로 패키징할 수 있도록 지원하여 마이크로서비스 개발을 용이하게 만든다.</p>
+
+<p>그러나 수많은 서버에 분산된 컨테이너를 유지하기 위해 애플리케이션이 복잡해짐에 따라 여러 컨테이너를 조정하고 예약하는 방법, 컨테이너 간 통신을 가능하게 하는 방법 및 컨테이너 인스턴스를 확장하는 방법과 같은 문제가 발생했고 이 문제를 해결하기 위해 Kubernetes가 공개됨</p>
+
+<p>Docker는 개발자가 컨테이너를 빌드, 배포 및 실행하도록 지원하는 상용 컨테이너화 플랫폼 및 런타임이다. 단일 API를 통한 간단한 명령과 자동화를 갖춘 클라이언트-서버 아키텍처를 사용한다</p>
+
+<p>개발자는 Docker 없이도 컨테이너를 만들 수 있지만 Docker 플랫폼을 사용하면 보다 쉽게 컨테이너를 만들 수 있다.</p>
+
+<p>Docker를 사용하면 컨테이너를 매우 가벼운 모듈식 가상 머신처럼 다룰 수 있다. 또한 컨테이너를 구축, 배포, 복사하고 한 환경에서 다른 환경으로 이동하는 등 유연하게 사용할 수 있어 애플리케이션을 클라우드에 최적화 하도록 지원한다.</p>
+
+<p>Docker를 사용하면 환경에 구애받지 않고 애플리케이션을 신속하게 배포 및 확장할 수 있고 코드가 문제 없이 실행될 것임을 확신할 수 있다.</p>
+
+<p>Docker를 사용하면 코드를 더 빨리 전달하고 애플리케이션 운영을 표준화하고 코드를 원활하게 이동하고 리소스 사용률을 높여 비용을 절감할 수 있음 <br />
+Docker를 사용하면 어디서나 안정적으로 실행할 수 있는 단일 객체를 확보하게 됨 <br />
+Docker의 간단한 구문을 사용해 완벽하게 제어할 수 있음</p>
+
+<p>더 많은 소프트웨어를 더 빨리 제공 : Docker 사용자는 평군적으로 Docker를 사용하지 않는 사용자보다 7배 더 많은 소프트웨어를 제공한다.</p>
+
+<p>운영 표준화 : 작은 컨테이너식 애플리케이션을 사용하면 손쉽게 배포하고, 문제를 파악하고, 수정을 위해 롤백할 수 있다.</p>
+
+<p>원활하게 이전 : Docker 기반 애플리케이션을 로컬 개발 시스템에서 AWS의 프로덕션 배포로 원활하게 이전할 수 있다.</p>
+
+<p>비용절감 : Docker 컨테이너를 사용하면 각 서버에서 좀 더 쉽게 더 많은 코드를 실행하여 사용률을 높이고 비용을 절감할 수 있다.</p>
+
+<p>workflow 를 심플하고 빠르게 만들어줌</p>
+
+<p>Docker Desktop <br />
+Docker Hub</p>
+
+<h2 id="container란-무엇인가">Container란 무엇인가</h2>
+
+<p>컨테이너는 애플리케이션을 실행하는 데 필요한 코드, 라이브러리, 의존성 등을 포함하는 경량의 독립적인 실행환경이다. 컨테이너는 소프트웨어를 표준화된 방식으로 패키징하여, 개발, 테스트 및 프로덕션 환경에서 일관된 동장을 보장한다</p>
+
+<p>개발시 표준화된 유닛으로 패키징 하는것. 라이브러리, 시스템도구, 코드, 런타임 등 소프트웨어를 실행하는 데 필요한 모든 것이 포함되어 있다.</p>
+
+<p>Docker 컨테이너를 최신 애플리케이션 및 플랫폼을 생성하는 핵심 빌딩 블록으로 사용할 수 있다. Docker에서는 손쉽게 분산 마이크로서비스 아키텍처를 구축 및 실행하고 표준화된 지속적 통합 및 지속적 전달 파이프라인을 통해 코드를 배포하고, 고도로 확장 가능한 데이터 처리 시스템을 구축하고, 개발자를 위한 완전관리형 플랫폼을 생성할 수 있다.</p>
+
+<p>AWS와 Docker의 최근 협업으로 Docker Compose 아티팩트를 Amazon ECS 및 AWS Fargate에 보다 쉽게 배포할 수 있다</p>
+
+<p>하드웨어 가상화를 제공하는 VM과 달리 컨테이너는 ‘사용자 공간’을 추상화함으로써 경량의 운영체제 수준의 가상화를 제공한다. 컨테이너는 호스트 시스템의 커널을 다른 컨테이너와 공유한다. 호스트 운영체제에서 실행되는 컨테이너는 코드와 모든 종속성을 패키지화하여 애플리캐이션이 한 환경에서 다른 환경으로 빠르고 안정적으로 실행될 수 있게 해주는 표준 소프트웨어 장치이다. 컨테이너는 영구적이지 않으며 이미지로부터 생성된다.</p>
+
+<p>Docker 엔진: 컨테이너를 구축 및 실행하는 오픈 소스 호스트 소프트웨어. Docker 엔진은 다양한 Windows 서버 및 Linux 운영체제에서 컨테이너를 지원하는 클라이언트 서버 애플리케이션의 역할을 한다</p>
+
+<p>Docker 이미지: 컨테이너로 실행될 소프트웨어 모음. 여기에는 Docker 플랫폼에서 실행할 수 있는 컨테이너 생성 지침이 포함되어 있다. 이미지는 변경할 수 없으며, 이미지를 변경하려면 새로운 이미지를 생성해야한다</p>
+
+<p>Docker 레지스트리: 이미지를 저장 및 다운로드할 수 있는 공간. 레지스트리는 무상태성을 갖춘 확장 가능한 서버측 애플리케이션으로 Docker 이미지를 저장 및 배포한다.</p>
+
+<h2 id="docker는-어떻게-작동하는가">Docker는 어떻게 작동하는가</h2>
+
+<p>Docker는 코드를 실행하는 표준 방식을 제공함 <br />
+Docker는 컨테이너를 위한 운영체제 <br />
+가상머신이 서버 하드웨어를 가상화하는 방식과 비슷하게(직접 관리해야 하는 필요성 제거) 컨테이너는 서버 운영 체제를 가상화 함 <br />
+Docker는 각 서버에 설치되며 컨테이너를 구축, 시작 또는 중단하는 데 사용할 수 있는 간단한 명령을 제공함</p>
+
+<p>Docker를 사용하면 환경에 구애받지 않고 애플리케이션을 신속하게 배포 및 확장할 수 있으며 코드가 문제없이 실행될 것임을 확신할 수 있다. 이는 Docker가 소프트웨어를 컨테이너라는 표준화된 유닛으로 패키징하기 떄문에 가능하다. 이 컨테이너에서는 라이브러리, 시스템 도구, 코드, 런타임 등 소프트웨어를 실행하는 데 필요한 모든 것이 포함되어 있다.</p>
+
+<p>Docker와 가상 머신의 차이점은? <br />
+가상머신(VM)은 서버 하드웨어를 가상화(또는 직접 관리할 필요성을 제거)하는 반면, 컨테이너는 서버의 운영 체제를 가상화한다. Docker는 컨테이너를 위한 운영 체제(또는 런타임)이다. 컨테이너를 실행하려는 각 서버에 Docker Engine이 설치되어 컨테이너를 구축, 시작 또는 중단하는 데 사용할 수 있는 간단한 명령 세트를 제공한다.</p>
+
+<h2 id="kubernetes">Kubernetes</h2>
+
+<p>컨테이너 관리 도구</p>
+
+<p>Docker는 컨테이너화 플랫폼 및 런타임이며 Kubernetes는 여러 컨테이너 런타임에서 컨테이너를 실행하고 관리하기 위한 플랫폼임. Kubernetes는 Docker를 포함한 수많은 컨테이너 런타임을 지원한다.</p>
+
+<h3 id="참고">참고</h3>
+
+<p><a href="https://www.docker.com/">도커 홈페이지</a> <br />
+<a href="https://aws.amazon.com/ko/docker/">Docker란 무엇입니까?</a> <br />
+<a href="https://www.atlassian.com/ko/microservices/microservices-architecture/kubernetes-vs-docker">Kubernetes와 Docker 비교</a> <br />
+<a href="https://www.oracle.com/kr/cloud/cloud-native/container-registry/what-is-docker/">Docker란 무엇인가?</a> <br />
+<a href="https://hoon93.tistory.com/48">도커 컨테이너와 이미지란?</a> <br />
+<a href="https://aws.amazon.com/ko/compare/the-difference-between-containers-and-virtual-machines/">컨테이너와 가상 머신의 차이점은 무엇인가요?</a></p>
+
+</article>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading"></h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+	<li class="nav-link"><a href="/books/">Books</a>
+	
+
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+	<li class="nav-link"><a href="/resume/">Resume</a>
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:skfo3219@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">skfo3219@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/infinite130" title="Follow me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">infinite130</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text"></p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>
