@@ -5,6 +5,12 @@ plugins:
 paginate: 5 # 한 페이지에 보여줄 포스트 수
 paginate_path: "/page/:num/"
 
+collections:
+  books:
+    output: true
+    permalink: /books/:title/
+
+
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://infinite130.github.io" # the base hostname & protocol for your site
 email: skfo3219@gmail.com
