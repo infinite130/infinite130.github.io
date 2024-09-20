@@ -130,7 +130,6 @@ main_nav: true
         </div>
         <a href="https://infinite130.github.io" target="_blank">블로그 이동</a>
       </div>
-
       <!-- 두 번째 프로젝트 -->
       <div class="section__list-item">
         <div class="name">SML</div>
@@ -166,7 +165,6 @@ main_nav: true
         </div>
         <a href="https://github.com/SML-SpringInMyLife/SML" target="_blank">GitHub 이동</a>
       </div>
-
       <!-- 세 번째 프로젝트 -->
       <div class="section__list-item">
         <div class="name">JAVANOS</div>
@@ -195,9 +193,7 @@ main_nav: true
         </div>
         <a href="https://github.com/JAVANOS6/javanos" target="_blank">GitHub 이동</a>
       </div>
-    </div>
-  </div>
-
+  </div>   
   <!-- Experience 섹션 -->
   <div class="section">
     <div class="section__title">Experience</div>
@@ -220,7 +216,6 @@ main_nav: true
       </div>
     </div>
   </div>
-
   <!-- Education 섹션 -->
   <div class="section">
     <div class="section__title">Education</div>
@@ -251,7 +246,6 @@ main_nav: true
       </div>
     </div>
   </div>
-</div>
 
 <!-- 슬라이드 스타일 -->
 <style>
@@ -259,11 +253,6 @@ main_nav: true
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
-}
-
-.section__title {
-  font-size: 24px;
-  margin-bottom: 20px;
 }
 
 .section__list-item {
@@ -313,6 +302,15 @@ main_nav: true
   margin-right: 10px;
   vertical-align: middle;
 }
+
+.section__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* 원하는 색상으로 변경 */
+    text-transform: uppercase; /* 모두 대문자로 표시 (선택 사항) */
+    margin-bottom: 20px;
+}
+
 
 /* 공통 스타일 적용 */
 .section__list-item .name {
