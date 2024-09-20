@@ -61,13 +61,17 @@ main_nav: true
             <p><strong>기간:</strong> 2024년 9월 - 진행중</p>
             <p><strong>사용 기술:</strong></p>
             <div class="tech-stack">
-              <img src="https://img.shields.io/badge/spring-6DB33F?logo=spring&logoColor=white">
-              <img src="https://img.shields.io/badge/eclipse-2C2255?style=flat-square&logo=eclipse&logoColor=white">
-              <img src="https://img.shields.io/badge/maven-C71A36?logo=apache-maven&logoColor=white">
-              <img src="https://img.shields.io/badge/mybatis-DC382D?logo=mybatis&logoColor=white"/>
-              <img src="https://img.shields.io/badge/html5-E34F26?logo=html5&logoColor=white">
-              <img src="https://img.shields.io/badge/javascript-F7DF1E?logo=javascript&logoColor=black">
-            </div>
+  <img src="https://img.shields.io/badge/java-007396?logo=java&logoColor=white">
+  <img src="https://img.shields.io/badge/springboot-6DB33F?logo=springboot&logoColor=white">
+  <img src="https://img.shields.io/badge/intellij-000000?logo=intellij-idea&logoColor=white">
+  <img src="https://img.shields.io/badge/mysql-4479A1?logo=mysql&logoColor=white">
+  <img src="https://img.shields.io/badge/jpa-6DB33F?logo=hibernate&logoColor=white">
+  <img src="https://img.shields.io/badge/jwt-000000?logo=json-web-tokens&logoColor=white">
+  <img src="https://img.shields.io/badge/gradle-02303A?logo=gradle&logoColor=white">
+  <img src="https://img.shields.io/badge/swagger-85EA2D?logo=swagger&logoColor=black">
+  <img src="https://img.shields.io/badge/react-61DAFB?logo=react&logoColor=black">
+</div>
+
           </div>
 
           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
@@ -89,8 +93,23 @@ main_nav: true
 
           <!-- 프로젝트 기간 및 사용기술 -->
           <div class="project-info">
-            <p><strong>기간:</strong> 2022년 9월 - 2023년 1월</p>
-            <p><strong>사용 기술:</strong> Python, Django, PostgreSQL</p>
+            <p><strong>기간:</strong> 2024년 7월 - 2024년 8월</p>
+             <p><strong>사용 기술:</strong></p>
+            <div class="tech-stack">
+  <img src="https://img.shields.io/badge/java-007396?logo=java&logoColor=white">
+  <img src="https://img.shields.io/badge/spring-6DB33F?logo=spring&logoColor=white">
+    <img src="https://img.shields.io/badge/eclipse-2C2255?style=flat-square&logo=eclipse&logoColor=white">
+  <img src="https://img.shields.io/badge/tomcat-F8DC75?logo=apache-tomcat&logoColor=black">
+  <img src="https://img.shields.io/badge/mybatis-DC382D?logo=mybatis&logoColor=white"/>
+  <img src="https://img.shields.io/badge/hikaricp-007396?logo=java&logoColor=white">
+  <img src="https://img.shields.io/badge/maven-C71A36?logo=apache-maven&logoColor=white">
+  <img src="https://img.shields.io/badge/jsp-007396?logo=java&logoColor=white">
+  <img src="https://img.shields.io/badge/css3-1572B6?logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/javascript-F7DF1E?logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/html5-E34F26?logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/oracle-F80000?logo=oracle&logoColor=white">
+</div>
+
           </div>
 
           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. </div>
@@ -111,8 +130,17 @@ main_nav: true
 
           <!-- 프로젝트 기간 및 사용기술 -->
           <div class="project-info">
-            <p><strong>기간:</strong> 2021년 10월 - 2022년 3월</p>
-            <p><strong>사용 기술:</strong> Java, Spring Framework, Oracle DB</p>
+            <p><strong>기간:</strong> 2024년 6월 - 2024년 7월</p>
+             <p><strong>사용 기술:</strong></p>
+            <div class="tech-stack">
+  <img src="https://img.shields.io/badge/java-007396?logo=java&logoColor=white">
+  <img src="https://img.shields.io/badge/eclipse-2C2255?style=flat-square&logo=eclipse&logoColor=white">
+  <img src="https://img.shields.io/badge/servlet-232F3E?logo=java&logoColor=white">
+  <img src="https://img.shields.io/badge/jsp-007396?logo=java&logoColor=white">
+  <img src="https://img.shields.io/badge/mybatis-DC382D?logo=mybatis&logoColor=white">
+  <img src="https://img.shields.io/badge/mysql-4479A1?logo=mysql&logoColor=white">
+</div>
+
           </div>
 
           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
