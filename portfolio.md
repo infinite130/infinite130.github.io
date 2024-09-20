@@ -44,13 +44,13 @@ main_nav: true
         <div class="section__list-item">
           <div class="name">팀 프로젝트 마이그레이션</div>
           <!-- 이미지 슬라이드 -->
-          <div class="carousel">
-            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+          <div class="carousel" id="carousel1">
+            <button class="prev" onclick="changeSlide(-1, 'carousel1')">&#10094;</button>
             <div class="slides">
-              <img src="https://github.com/user-attachments/assets/82450a17-54ad-424e-a0ab-c494fbe8bd3f" alt="Slide 1">
+              <img src="https://github.com/user-attachments/assets/82450a17-54ad-424e-a0ab-c494fbe8bd3f" alt="Slide 1" class="active">
               <img src="https://github.com/user-attachments/assets/682026b2-a978-4f13-83a2-76d69b79ca58" alt="Slide 2">
             </div>
-            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            <button class="next" onclick="changeSlide(1, 'carousel1')">&#10095;</button>
           </div>
 
           <!-- 프로젝트 기간 및 사용기술 -->
@@ -75,13 +75,13 @@ main_nav: true
         <!-- 두 번째 프로젝트 -->
         <div class="section__list-item">
           <div class="name">SML</div>
-          <div class="carousel">
-            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+          <div class="carousel" id="carousel2">
+            <button class="prev" onclick="changeSlide(-1, 'carousel2')">&#10094;</button>
             <div class="slides">
-              <img src="https://github.com/user-attachments/assets/82450a17-54ad-424e-a0ab-c494fbe8bd3f" alt="Slide 1">
+              <img src="https://github.com/user-attachments/assets/82450a17-54ad-424e-a0ab-c494fbe8bd3f" alt="Slide 1" class="active">
               <img src="https://github.com/user-attachments/assets/682026b2-a978-4f13-83a2-76d69b79ca58" alt="Slide 2">
             </div>
-            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            <button class="next" onclick="changeSlide(1, 'carousel2')">&#10095;</button>
           </div>
 
           <!-- 프로젝트 기간 및 사용기술 -->
@@ -97,13 +97,13 @@ main_nav: true
         <!-- 세 번째 프로젝트 -->
         <div class="section__list-item">
           <div class="name">JAVANOS</div>
-          <div class="carousel">
-            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+          <div class="carousel" id="carousel3">
+            <button class="prev" onclick="changeSlide(-1, 'carousel3')">&#10094;</button>
             <div class="slides">
-              <img src="https://github.com/user-attachments/assets/82450a17-54ad-424e-a0ab-c494fbe8bd3f" alt="Slide 1">
+              <img src="https://github.com/user-attachments/assets/82450a17-54ad-424e-a0ab-c494fbe8bd3f" alt="Slide 1" class="active">
               <img src="https://github.com/user-attachments/assets/682026b2-a978-4f13-83a2-76d69b79ca58" alt="Slide 2">
             </div>
-            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            <button class="next" onclick="changeSlide(1, 'carousel3')">&#10095;</button>
           </div>
 
           <!-- 프로젝트 기간 및 사용기술 -->
@@ -134,13 +134,6 @@ main_nav: true
         </div>
         <div class="right"></div>
       </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section__title">Interests</div>
-    <div class="section__list">
-      <div class="section__list-item">Football, programming.</div>
     </div>
   </div>
 
@@ -209,14 +202,13 @@ main_nav: true
 
 .carousel {
   position: relative;
-  max-width: 100%;
+  max-width: 600px; /* 슬라이드 전체 크기를 줄임 */
   margin-bottom: 20px; /* 슬라이드 아래 간격 */
 }
 
 .slides img {
   display: none;
-  width: 50%; /* 이미지 크기 50%로 조정 */
-  margin: 0 auto; /* 가운데 정렬 */
+  width: 100%; /* 슬라이드 안에서 이미지가 전체 크기로 */
 }
 
 .slides img.active {
@@ -255,18 +247,16 @@ main_nav: true
 
 <!-- 슬라이드 기능 자바스크립트 -->
 <script>
-let slideIndex = 0;
-showSlides(slideIndex);
-
-function changeSlide(n) {
-  showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-  let slides = document.querySelectorAll('.slides img');
-  if (n >= slides.length) { slideIndex = 0 }
-  if (n < 0) { slideIndex = slides.length - 1 }
-  slides.forEach(slide => slide.classList.remove('active'));
-  slides[slideIndex].classList.add('active');
+function changeSlide(n, carouselId) {
+  let slides = document.querySelectorAll(`#${carouselId} .slides img`);
+  let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+  
+  slides[activeIndex].classList.remove('active');
+  
+  let newIndex = activeIndex + n;
+  if (newIndex >= slides.length) newIndex = 0;
+  if (newIndex < 0) newIndex = slides.length - 1;
+  
+  slides[newIndex].classList.add('active');
 }
 </script>
