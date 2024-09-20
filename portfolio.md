@@ -193,7 +193,6 @@ main_nav: true
         </div>
         <a href="https://github.com/JAVANOS6/javanos" target="_blank">GitHub 이동</a>
       </div>
-  </div>   
   <!-- Experience 섹션 -->
   <div class="section">
     <div class="section__title">Experience</div>
@@ -301,33 +300,6 @@ main_nav: true
 .tech-stack img {
   margin-right: 10px;
   vertical-align: middle;
-}
-
-.section__title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333; /* 원하는 색상으로 변경 */
-    text-transform: uppercase; /* 모두 대문자로 표시 (선택 사항) */
-    margin-bottom: 20px;
-}
-
-
-/* 공통 스타일 적용 */
-.section__list-item .name {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-
-.section__list-item .text {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.section__list-item .project-info {
-  font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 10px;
 }
 </style>
 
