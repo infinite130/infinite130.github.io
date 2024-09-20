@@ -5,12 +5,26 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 Sep 2024 10:57:26 +0900</pubDate>
-    <lastBuildDate>Thu, 19 Sep 2024 10:57:26 +0900</lastBuildDate>
+    <pubDate>Fri, 20 Sep 2024 15:13:58 +0900</pubDate>
+    <lastBuildDate>Fri, 20 Sep 2024 15:13:58 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
     
       <item>
-        <title>컴퓨터 밑바닥의 사정</title>
+        <title>[sideproject 05] Swagger API 문서화 하기</title>
+        <description>&lt;h3 id=&quot;swagger-ui-의존성-주입&quot;&gt;Swagger UI 의존성 주입&lt;/h3&gt; &lt;p&gt;build.gradle 파일에 의존성 추가하기&lt;/p&gt; &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'&lt;/code&gt;&lt;/p&gt; &lt;p&gt;의존성 추가 후 애플리케이션을 실행하면 아래 링크로 접속할 수 있다&lt;/p&gt; &lt;p&gt;localhost:8080/swagger-ui/index.html&lt;/p&gt; &lt;p&gt;그리고 저 url에 접속해보면 http://localhost:8080/login 로...</description>
+        <pubDate>Thu, 19 Sep 2024 11:00:00 +0900</pubDate>
+        <link>http://localhost:4000/post/2024/09/19/side-project-5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/post/2024/09/19/side-project-5.html</guid>
+        
+        <category>project</category>
+        
+        
+        <category>post</category>
+        
+      </item>
+    
+      <item>
+        <title>컴퓨터 밑바닥의 비밀</title>
         <description>&lt;h4 id=&quot;책리뷰&quot;&gt;책리뷰&lt;/h4&gt;
 </description>
         <pubDate>Thu, 19 Sep 2024 10:00:00 +0900</pubDate>
@@ -25,8 +39,12 @@
       </item>
     
       <item>
-        <title>[sideproject 04] mapper 에서 jpa로</title>
-        <description>&lt;h3 id=&quot;entity-dao-vo-dto&quot;&gt;Entity DAO VO DTO&lt;/h3&gt;
+        <title>[sideproject 04] 데이터 전달방식 json 형식으로 수정하기</title>
+        <description>&lt;h3 id=&quot;controller-수정&quot;&gt;controller 수정&lt;/h3&gt;
+
+&lt;p&gt;기존의 LocationVO 에서 받아오던 데이터를 Location 으로 수정함&lt;/p&gt;
+
+&lt;p&gt;view를 jsp가 아니라 react로 만들기 때문에 데이터 전달방식을 json 형식으로 수정해야함&lt;/p&gt;
 </description>
         <pubDate>Wed, 18 Sep 2024 11:00:00 +0900</pubDate>
         <link>http://localhost:4000/post/2024/09/18/side-project-4.html</link>
@@ -40,10 +58,8 @@
       </item>
     
       <item>
-        <title>[sideproject 03] 데이터 전달방식 json 형식으로 수정하기</title>
-        <description>&lt;h3 id=&quot;controller-수정&quot;&gt;controller 수정&lt;/h3&gt;
-
-</description>
+        <title>[sideproject 03] mapper 에서 jpa로</title>
+        <description>&lt;h3 id=&quot;entity-생성&quot;&gt;Entity 생성&lt;/h3&gt; &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import jakarta.persistence.Column; import jakarta.persistence.Entity; import jakarta.persistence.Id; import jakarta.persistence.Table; import lombok.AllArgsConstructor; import lombok.Builder; import lombok.Getter; import lombok.NoArgsConstructor; import lombok.Setter; @Getter @Setter @AllArgsConstructor @NoArgsConstructor @Builder...</description>
         <pubDate>Wed, 18 Sep 2024 10:00:00 +0900</pubDate>
         <link>http://localhost:4000/post/2024/09/18/side-project-3.html</link>
         <guid isPermaLink="true">http://localhost:4000/post/2024/09/18/side-project-3.html</guid>

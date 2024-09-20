@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>[sideproject 03] 데이터 전달방식 json 형식으로 수정하기</title>
-  <meta name="description" content="controller 수정">
+  <title>[sideproject 03] mapper 에서 jpa로</title>
+  <meta name="description" content="Entity 생성">
   
 
   <!-- External libraries -->
@@ -110,7 +110,7 @@
 <div class="post-header-container " >
   <div class="scrim ">
     <header class="post-header">
-      <h1 class="title">[sideproject 03] 데이터 전달방식 json 형식으로 수정하기</h1>
+      <h1 class="title">[sideproject 03] mapper 에서 jpa로</h1>
       <p class="info">by <strong></strong></p>
     </header>
   </div>
@@ -136,8 +136,35 @@
 </section>
 
 <article class="post-content">
-  <h3 id="controller-수정">controller 수정</h3>
+  <h3 id="entity-생성">Entity 생성</h3>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Entity
+@Table(name = "LOCATION")
+public class Location extends BaseTimeEntity {
+
+  @Id
+  @Column(name = "search_keyword", nullable = false)
+  private String searchKeyword;
+
+}
+</code></pre></div></div>
+
+<p>엔티티 생성 후 프로젝트를 실행하면 연결된 데이터베이스에 자동으로 테이블이 생성됨</p>
 
 </article>
 

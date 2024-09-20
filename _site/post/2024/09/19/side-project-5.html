@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>[sideproject 02] 빌드 및 데이터 연결</title>
-  <meta name="description" content="Spring Framework 에서 Spring Boot 로 마이그레이션하기">
+  <title>[sideproject 05] Swagger API 문서화 하기</title>
+  <meta name="description" content="Swagger UI 의존성 주입">
   
 
   <!-- External libraries -->
@@ -44,7 +44,7 @@
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/post/2024/09/16/side-project-2.html">
+  <link rel="canonical" href="http://localhost:4000/post/2024/09/19/side-project-5.html">
 	<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
@@ -110,7 +110,7 @@
 <div class="post-header-container " >
   <div class="scrim ">
     <header class="post-header">
-      <h1 class="title">[sideproject 02] 빌드 및 데이터 연결</h1>
+      <h1 class="title">[sideproject 05] Swagger API 문서화 하기</h1>
       <p class="info">by <strong></strong></p>
     </header>
   </div>
@@ -125,7 +125,7 @@
  
 
 <section class="post-meta">
-  <div class="post-date">September 16, 2024</div>
+  <div class="post-date">September 19, 2024</div>
   <div class="post-categories">
   in 
     
@@ -136,34 +136,108 @@
 </section>
 
 <article class="post-content">
-  <h3 id="spring-framework-에서-spring-boot-로-마이그레이션하기">Spring Framework 에서 Spring Boot 로 마이그레이션하기</h3>
+  <h3 id="swagger-ui-의존성-주입">Swagger UI 의존성 주입</h3>
 
-<h4 id="새-프로젝트-만들기">새 프로젝트 만들기</h4>
+<p>build.gradle 파일에 의존성 추가하기</p>
 
-<p>IntelliJ <br />
-File -&gt; New Project -&gt; Spring Boot</p>
+<p><code class="language-plaintext highlighter-rouge">implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'</code></p>
 
-<p>인텔리제이에서 위 순서대로 새로운 프로젝트를 선택  우측 하단에 <code class="language-plaintext highlighter-rouge">NEXT</code></p>
+<p>의존성 추가 후 애플리케이션을 실행하면 아래 링크로 접속할 수 있다</p>
 
-<h4 id="react-연결">react 연결</h4>
+<p>localhost:8080/swagger-ui/index.html</p>
 
-<h4 id="mysql-연동-및-jpa">mysql 연동 및 jpa</h4>
+<p>그리고 저 url에 접속해보면 http://localhost:8080/login 로 이동되면서 sign in 페이지가 뜬다 <br />
+swagger hub 아이디랑 비밀번호로 로그인 시도를 해봤지만 안됨</p>
 
-<h3 id="오류-기록">오류 기록</h3>
+<h3 id="swaggerconfiguration-class-생성">SwaggerConfiguration class 생성</h3>
 
-<h4 id="docker-compose">Docker Compose</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import static io.swagger.v3.oas.models.security.SecurityScheme.Type.HTTP;
 
-<blockquote>
-  <p>Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?</p>
-</blockquote>
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.License;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-<p>서버 실행할 때 저런 오류 메세지가 떴다. 서버 연결할 때 Docker demon이 실행되지 않아서 서버를 실행할 수 없다는 것이다.</p>
+@Getter
+@Setter
+@Configuration
+@ConfigurationProperties(prefix = "swagger")
+public class SwaggerConfiguration {
 
-<p>Docker demon이 뭔데…</p>
+  private String appName;
 
-<p><img src="https://github.com/user-attachments/assets/a7e4b6c3-9919-444a-a68d-e405d0363175" alt="2" /></p>
+  private String appDescription;
 
-<p>의존성을 많이 추가해서 발생한 문제였다… 쓸 것만 담기… 무슨 장바구니 쇼핑하듯이 담아놓음</p>
+  private String appVersion;
+
+  private String appLicense;
+
+  private String appLicenseUrl;
+
+  private String contactName;
+
+  private String contactUrl;
+
+  private String contactMail;
+
+  @Bean
+  public OpenAPI openAPI() {
+
+    final Info apiInformation = getApiInformation();
+    final Components components = new Components();
+
+    final String schemeName = "bearerAuth";
+    components.addSecuritySchemes(schemeName,
+        new SecurityScheme().name(schemeName).type(HTTP).scheme("bearer").bearerFormat("JWT"));
+
+    final OpenAPI openAPI = new OpenAPI();
+    openAPI.setInfo(apiInformation);
+    openAPI.setComponents(components);
+    openAPI.addSecurityItem(new SecurityRequirement().addList(schemeName));
+
+    return openAPI;
+  }
+
+  private Info getApiInformation() {
+
+    final License license = new License();
+    license.setName(appLicense);
+    license.setUrl(appLicenseUrl);
+
+    final Contact contact = new Contact();
+    contact.setName(contactName);
+    contact.setUrl(contactUrl);
+    contact.setEmail(contactMail);
+
+    final Info info = new Info();
+    info.setTitle(appName);
+    info.setVersion(appVersion);
+    info.setDescription(appDescription);
+    info.setLicense(license);
+    info.setContact(contact);
+
+    return info;
+  }
+
+}
+</code></pre></div></div>
+
+<p>### controller에 어노테이션 추가</p>
+
+<p>어노테이션 사용으로 API 그룹화할 태그명 지정하기</p>
+
+<p><code class="language-plaintext highlighter-rouge">@RestController
+@RequestMapping("/api/response_estimate")
+@RequiredArgsConstructor
+@Tag(name = "Response Estimate", description = "Response Estimate API")</code></p>
 
 </article>
 

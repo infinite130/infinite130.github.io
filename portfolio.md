@@ -15,8 +15,8 @@ main_nav: true
     </div>
     <br>
     <div class="contact-info">
-      <span class="email">Email </span>
-      <span class="email-val">skfo3219@gmail.com</span><br>
+      <span class="mail">Email </span>
+      <span class="mail-val">skfo3219@gmail.com</span><br>
       <span class="github">GitHub </span>
       <span class="github-val">
         <a href="https://github.com/infinite130" target="_blank" rel="noopener noreferrer">infinite130</a>
@@ -38,7 +38,7 @@ main_nav: true
 
   <!-- Skills 섹션 -->
   <div class="section">
-    <div class="section__title">Skills</div>
+    <div class="section__title">Skills</div><br>
     <div class="section__list">
       <div class="section__list-item">
         <div class="name">Java</div>
@@ -74,10 +74,10 @@ main_nav: true
       </div>
     </div>
   </div>
-
+<br>
   <!-- Soft Skills 섹션 -->
   <div class="section">
-    <div class="section__title">Soft Skills</div>
+    <div class="section__title">Soft Skills</div><br>
     <div class="section__list">
       <div class="section__list-item">
         <div class="name">Deadline</div>
@@ -96,7 +96,7 @@ main_nav: true
 
   <!-- Project 섹션 -->
   <div class="section">
-    <div class="section__title">Projects</div>
+    <div class="section__title">Projects</div><br>
     <div class="section__list">
       <!-- 첫 번째 프로젝트 -->
       <div class="section__list-item">
@@ -126,10 +126,10 @@ main_nav: true
           </div>
         </div>
         <div class="text">
-          Spring 과 MyBatis로 진행한 팀 프로젝트 <SML>에서 담당 기능인 위치 찾기, 후원 결제, 후원 문의 게시판 기능을 Spring Boot-JPA와 React로 마이그레이션 진행중입니다. 블로그에 진행 상황을 정리 중이며, 마이그레이션이 완료되면 Docker와 AWS를 사용해 개인적으로 배포할 계획입니다. 마이그레이션 프로젝트에서 가장 집중하는 부분은 배포와 Swagger를 사용한 API 문서화입니다.
+          Spring 과 MyBatis로 진행한 팀 프로젝트 SML에서 담당 기능인 위치 찾기, 후원 결제, 후원 문의 게시판 기능을 Spring Boot-JPA와 React로 마이그레이션 진행중입니다. 블로그에 진행 상황을 정리 중이며, 마이그레이션이 완료되면 Docker와 AWS를 사용해 개인적으로 배포할 계획입니다. 마이그레이션 프로젝트에서 가장 집중하는 부분은 배포와 Swagger를 사용한 API 문서화입니다.
         </div>
         <a href="https://infinite130.github.io" target="_blank">블로그 이동</a>
-      </div>
+        </div>
       <!-- 두 번째 프로젝트 -->
       <div class="section__list-item">
         <div class="name">SML</div>
@@ -213,11 +213,10 @@ main_nav: true
         </div>
         <div class="text">2년간 입시학원 행정실에 근무하며 학부모 상담, 학생 관리, 시간표 관리, 수업 관리, 교육청 공지 업데이트 및 공지 문서화 전달, 원회비와 학원 재정 관리를 담당했습니다.</div>
       </div>
-    </div>
-  </div>
+  <br>
   <!-- Education 섹션 -->
   <div class="section">
-    <div class="section__title">Education</div>
+    <div class="section__title">Education</div><br>
     <div class="section__list">
       <div class="section__list-item">
         <div class="name">[송파여성인력개발센터] Java & Spring 백엔드 개발자 과정</div>
@@ -300,6 +299,17 @@ main_nav: true
 .tech-stack img {
   margin-right: 10px;
   vertical-align: middle;
+}
+
+.section__title {
+  font-size: 24px; /* 글자 크기 */
+  font-weight: bold; /* 글자 굵게 */
+  color: dodgerblue; /* 색상 변경 */
+}
+
+.name {
+  font-size: 17px;
+  font-weight: bold;
 }
 </style>
 
