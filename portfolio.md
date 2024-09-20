@@ -12,17 +12,18 @@ main_nav: true
   <div class="header">
     <div class="full-name">
       <span class="first-name">이나래</span>
+      <br>
     </div>
     <div class="contact-info">
-      <span class="email">Email: </span>
+      <span class="email">Email </span>
       <span class="email-val">skfo3219@gmail.com</span><br>
   
-      <span class="github">GitHub: </span>
+      <span class="github">GitHub </span>
       <span class="github-val">
         <a href="https://github.com/infinite130" target="_blank" rel="noopener noreferrer">infinite130</a>
       </span><br>
 
-      <span class="blog">Blog: </span>
+      <span class="blog">Blog </span>
       <span class="blog-val">
         <a href="https://infinite130.github.io" target="_blank" rel="noopener noreferrer">infinite130.github.io</a>
       </span>
@@ -30,8 +31,10 @@ main_nav: true
 
     <div class="about">
       <span class="position">Java Junior Back-End Developer </span>
+      <br>
       <span class="desc">
-        자바 주니어 백엔드 개발자 이나래입니다.
+        안녕하세요. 백엔드 개발자가 되고 싶은 이나래입니다.
+        저는 원래 바리스타로 근무하면서 음료를 제조하고 고객과 소통하는 일을 3년간 
       </span>
     </div>
   </div>
@@ -90,7 +93,7 @@ main_nav: true
             <p><strong>사용 기술:</strong> Python, Django, PostgreSQL</p>
           </div>
 
-          <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a></div>
+          <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. </div>
           <a href="https://github.com/SML-SpringInMyLife/SML" target="_blank">GitHub 이동</a>
         </div>
 
@@ -112,7 +115,7 @@ main_nav: true
             <p><strong>사용 기술:</strong> Java, Spring Framework, Oracle DB</p>
           </div>
 
-          <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a></div>
+          <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
           <a href="https://github.com/JAVANOS6/javanos" target="_blank">GitHub 이동</a>
         </div>
       </div>
