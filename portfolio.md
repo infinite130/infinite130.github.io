@@ -45,7 +45,7 @@ main_nav: true
     </div>
     <div class="section__list-item">
       <div class="name">Spring/Spring Boot</div>
-      <div class="text">Spring MVC를 이용한 RESTful API 구축, Spring Security를 통한 JWT 인증 처리</div>
+      <div class="text">Spring MVC를 이용한 RESTful API 구축</div>
     </div>
     <div class="section__list-item">
       <div class="name">MyBatis/JPA</div>
@@ -76,172 +76,175 @@ main_nav: true
 
 <!-- Soft Skills 섹션 -->
 <div class="section">
-      <div class="section__title">Soft Skills</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="name">Deadline</div>
-          <div class="text">저는 시간 준수를 중요하게 생각하며, 마감 기한 내에 일을 완료하려고 노력합니다.</div>
-        </div>
-        <div class="section__list-item">
-          <div class="name">Communication</div>
-          <div class="text">바리스타로 고객과 끊임없이 소통하며 소통의 핵심을 배울 수 있었습니다. 소통이란 상대가 말하고자 하는 주제를 명확하게 판별하는 것입니다. 저는 키워드를 골라내는 작업을 좋아하며 글쓸때도 종종 활용하고 있습니다.</div>
-        </div>
-        <div class="section__list-item">
-          <div class="name">Report</div>
-          <div class="text">저는 글쓰기를 좋아하고 문서화에 관심이 많습니다. 업무를 체계적으로 정리하고 문서화하는 능력을 계속 발전시키고 싶습니다. Swagger를 통한 Open API 관리에도 관심이 많지만, 제가 작업하고 배운 결과들을 기록하고 보고서로 문서화 하는 것에 관심이 많습니다.</div>
-        </div>
-      </div>
+  <div class="section__title">Soft Skills</div>
+  <div class="section__list">
+    <div class="section__list-item">
+      <div class="name">Deadline</div>
+      <div class="text">저는 시간 준수를 중요하게 생각하며, 마감 기한 내에 일을 완료하려고 노력합니다.</div>
     </div>
-<!--Project 섹션 -->
-  <div class="details">
-    <div class="section">
-      <div class="section__title">Projects</div> 
-      <div class="section__list">
-        <!-- 첫 번째 프로젝트 -->
-        <div class="section__list-item">
-          <div class="name">팀 프로젝트 마이그레이션</div>
-          <!-- 이미지 슬라이드 -->
-          <div class="carousel" id="carousel1">
-            <button class="prev" onclick="changeSlide(-1, 'carousel1')">&#10094;</button>
-            <div class="slides">
-              <img src="https://github.com/user-attachments/assets/f60bcdd5-9d60-416e-b346-610f5265a19a" alt="Slide 1" class="active">
-            </div>
-            <button class="next" onclick="changeSlide(1, 'carousel1')">&#10095;</button>
-          </div>
-          <!-- 프로젝트 기간 및 사용기술 -->
-          <div class="project-info">
-            <p><strong>기간:</strong> 2024년 9월 - 진행중</p>
-            <p><strong>사용 기술:</strong></p>
-            <div class="tech-stack">
-  <img src="https://img.shields.io/badge/java-007396?logo=java&logoColor=white">
-  <img src="https://img.shields.io/badge/springboot-6DB33F?logo=springboot&logoColor=white">
-  <img src="https://img.shields.io/badge/intellij-000000?logo=intellij-idea&logoColor=white">
-  <img src="https://img.shields.io/badge/mysql-4479A1?logo=mysql&logoColor=white">
-  <img src="https://img.shields.io/badge/jpa-6DB33F?logo=hibernate&logoColor=white">
-  <img src="https://img.shields.io/badge/jwt-000000?logo=json-web-tokens&logoColor=white">
-  <img src="https://img.shields.io/badge/gradle-02303A?logo=gradle&logoColor=white">
-  <img src="https://img.shields.io/badge/swagger-85EA2D?logo=swagger&logoColor=black">
-  <img src="https://img.shields.io/badge/react-61DAFB?logo=react&logoColor=black">
-</div>
-          </div>
-          <div class="text">Spring 과 MyBatis로 진행한 팀 프로젝트 <SML>에서 담당 기능인 위치 찾기, 후원 결제, 후원 문의 게시판 기능을 Spring Boot-JPA와 React로 마이그레이션 진행중입니다. 블로그에 진행 상황을 정리 중이며, 마이그레이션이 완료되면 Docker 와 AWS를 사용해 개인적으로 배포할 계획입니다. 마이그레이션 프로젝트에서 가장 집중하는 부분은 배포와 Swagger를 사용한 API 문서화 입니다. </div>
-          <a href="https://infinite130.github.io" target="_blank">블로그 이동</a>
-          <br>
-        </div>
-        <!-- 두 번째 프로젝트 -->
-        <div class="section__list-item">
-          <div class="name">SML</div>
-          <div class="carousel" id="carousel2">
-            <button class="prev" onclick="changeSlide(-1, 'carousel2')">&#10094;</button>
-            <div class="slides">
-              <img src="https://github.com/user-attachments/assets/82450a17-54ad-424e-a0ab-c494fbe8bd3f" alt="Slide 1" class="active">
-              <img src="https://github.com/user-attachments/assets/682026b2-a978-4f13-83a2-76d69b79ca58" alt="Slide 2">
-            </div>
-            <button class="next" onclick="changeSlide(1, 'carousel2')">&#10095;</button>
-          </div>
-      <!-- 프로젝트 기간 및 사용기술 -->
-          <div class="project-info">
-            <p><strong>기간:</strong> 2024년 7월 - 2024년 8월</p>
-             <p><strong>사용 기술:</strong></p>
-            <div class="tech-stack">
-  <img src="https://img.shields.io/badge/java-007396?logo=java&logoColor=white">
-  <img src="https://img.shields.io/badge/spring-6DB33F?logo=spring&logoColor=white">
-    <img src="https://img.shields.io/badge/eclipse-2C2255?style=flat-square&logo=eclipse&logoColor=white">
-  <img src="https://img.shields.io/badge/tomcat-F8DC75?logo=apache-tomcat&logoColor=black">
-  <img src="https://img.shields.io/badge/mybatis-DC382D?logo=mybatis&logoColor=white"/>
-  <img src="https://img.shields.io/badge/hikaricp-007396?logo=java&logoColor=white">
-  <img src="https://img.shields.io/badge/maven-C71A36?logo=apache-maven&logoColor=white">
-  <img src="https://img.shields.io/badge/jsp-007396?logo=java&logoColor=white">
-  <img src="https://img.shields.io/badge/css3-1572B6?logo=css3&logoColor=white">
-  <img src="https://img.shields.io/badge/javascript-F7DF1E?logo=javascript&logoColor=black">
-  <img src="https://img.shields.io/badge/html5-E34F26?logo=html5&logoColor=white">
-  <img src="https://img.shields.io/badge/oracle-F80000?logo=oracle&logoColor=white">
+    <div class="section__list-item">
+      <div class="name">Communication</div>
+      <div class="text">바리스타로 고객과 끊임없이 소통하며 소통의 핵심을 배울 수 있었습니다. 소통이란 상대가 말하고자 하는 주제를 명확하게 판별하는 것입니다. 저는 키워드를 골라내는 작업을 좋아하며 글쓸때도 종종 활용하고 있습니다.</div>
+    </div>
+    <div class="section__list-item">
+      <div class="name">Report</div>
+      <div class="text">저는 글쓰기를 좋아하고 문서화에 관심이 많습니다. 업무를 체계적으로 정리하고 문서화하는 능력을 계속 발전시키고 싶습니다. Swagger를 통한 Open API 관리에도 관심이 많지만, 제가 작업하고 배운 결과들을 기록하고 보고서로 문서화 하는 것에 관심이 많습니다.</div>
+    </div>
+  </div>
 </div>
 
- </div>
-          <div class="text">SML(Spring in My Life)는 노인 지원 프로그램으로 노인에게 다양한 교육의 기회와 커뮤니티를 제공합니다. 저는 API를 통한 지도 내 위치 찾기 기능과 후원 결제 기능을 구현하였습니다. 지도는 Kakao Map API를 활용하였고 '키워드 검색','카테고리 검색','내 위치 중심 검색','검색 기록 저장'이 주요 기능입니다. 결제는 IamPort API를 활용하였고 '카카오페이 결제','결제 정보 저장'이 주요 기능입니다. 이 프로젝트를 통해 API의 활용도 능력을 키울 수 있었습니다. </div>
-          <a href="https://github.com/SML-SpringInMyLife/SML" target="_blank">GitHub 이동</a>
-        </div>
-        <!-- 세 번째 프로젝트 -->
-        <div class="section__list-item">
-          <div class="name">JAVANOS</div>
-          <div class="carousel" id="carousel3">
-            <button class="prev" onclick="changeSlide(-1, 'carousel3')">&#10094;</button>
-            <div class="slides">
-              <img src="https://github.com/user-attachments/assets/448afc27-ba2b-45ca-ac69-2176241b4ef0" alt="Slide 1" class="active">
-            </div>
-            <button class="next" onclick="changeSlide(1, 'carousel3')">&#10095;</button>
+<!--Project 섹션 -->
+<div class="details">
+  <div class="section">
+    <div class="section__title">Projects</div> 
+    <div class="section__list">
+      <!-- 첫 번째 프로젝트 -->
+      <div class="section__list-item">
+        <div class="name">팀 프로젝트 마이그레이션</div>
+        <!-- 이미지 슬라이드 -->
+        <div class="carousel" id="carousel1">
+          <button class="prev" onclick="changeSlide(-1, 'carousel1')">&#10094;</button>
+          <div class="slides">
+            <img src="https://github.com/user-attachments/assets/f60bcdd5-9d60-416e-b346-610f5265a19a" alt="Slide 1" class="active">
           </div>
-          <!-- 프로젝트 기간 및 사용기술 -->
-          <div class="project-info">
-            <p><strong>기간:</strong> 2024년 6월 - 2024년 7월</p>
-             <p><strong>사용 기술:</strong></p>
-            <div class="tech-stack">
-  <img src="https://img.shields.io/badge/java-007396?logo=java&logoColor=white">
-  <img src="https://img.shields.io/badge/eclipse-2C2255?style=flat-square&logo=eclipse&logoColor=white">
-  <img src="https://img.shields.io/badge/servlet-232F3E?logo=java&logoColor=white">
-  <img src="https://img.shields.io/badge/jsp-007396?logo=java&logoColor=white">
-  <img src="https://img.shields.io/badge/mybatis-DC382D?logo=mybatis&logoColor=white">
-  <img src="https://img.shields.io/badge/mysql-4479A1?logo=mysql&logoColor=white">
-</div>
-          </div>
-          <div class="text">JAVANOS는 지하철 좌석 공유 플랫폼으로 서울 지하철을 이용하는 고객이 빈좌석을 발견했을 때 JAVANOS 회원에게 위치를 공유하여 빈좌석을 알려주는 시스템입니다. 그 외에도 분실물 센터, 커뮤니티 등 회원 간 소통 창구가 마련되어 있습니다. 저는 JAVANOS 에서 관리자 기능을 담당했고 커뮤니티 게시판 글 신고, 신고된 글 처리, 신고 당한 회원 계정 정지 및 복구 처리 기능을 구현했습니다.</div>
-          <a href="https://github.com/JAVANOS6/javanos" target="_blank">GitHub 이동</a>
+          <button class="next" onclick="changeSlide(1, 'carousel1')">&#10095;</button>
         </div>
+        <!-- 프로젝트 기간 및 사용기술 -->
+        <div class="project-info">
+          <p><strong>기간:</strong> 2024년 9월 - 진행중</p>
+          <p><strong>사용 기술:</strong></p>
+          <div class="tech-stack">
+            <img src="https://img.shields.io/badge/java-007396?logo=java&logoColor=white">
+            <img src="https://img.shields.io/badge/springboot-6DB33F?logo=springboot&logoColor=white">
+            <img src="https://img.shields.io/badge/intellij-000000?logo=intellij-idea&logoColor=white">
+            <img src="https://img.shields.io/badge/mysql-4479A1?logo=mysql&logoColor=white">
+            <img src="https://img.shields.io/badge/jpa-6DB33F?logo=hibernate&logoColor=white">
+            <img src="https://img.shields.io/badge/jwt-000000?logo=json-web-tokens&logoColor=white">
+            <img src="https://img.shields.io/badge/gradle-02303A?logo=gradle&logoColor=white">
+            <img src="https://img.shields.io/badge/swagger-85EA2D?logo=swagger&logoColor=black">
+            <img src="https://img.shields.io/badge/react-61DAFB?logo=react&logoColor=black">
+          </div>
+        </div>
+        <div class="text">Spring 과 MyBatis로 진행한 팀 프로젝트 <SML>에서 담당 기능인 위치 찾기, 후원 결제, 후원 문의 게시판 기능을 Spring Boot-JPA와 React로 마이그레이션 진행중입니다. 블로그에 진행 상황을 정리 중이며, 마이그레이션이 완료되면 Docker 와 AWS를 사용해 개인적으로 배포할 계획입니다. 마이그레이션 프로젝트에서 가장 집중하는 부분은 배포와 Swagger를 사용한 API 문서화 입니다. </div>
+        <a href="https://infinite130.github.io" target="_blank">블로그 이동</a>
+        <br>
       </div>
-    </div>
-    <!-- Experience 섹션 -->
-    <div class="section">
-      <div class="section__title">Experience</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="name">스타벅스</div>
-          <div class="project-info">
-            <p><strong>기간:</strong> 2021년 8월 - 2023년 12월</p>
-            <p><strong>역할:</strong> 바리스타</p>
+      <!-- 두 번째 프로젝트 -->
+      <div class="section__list-item">
+        <div class="name">SML</div>
+        <div class="carousel" id="carousel2">
+          <button class="prev" onclick="changeSlide(-1, 'carousel2')">&#10094;</button>
+          <div class="slides">
+            <img src="https://github.com/user-attachments/assets/82450a17-54ad-424e-a0ab-c494fbe8bd3f" alt="Slide 1" class="active">
+            <img src="https://github.com/user-attachments/assets/682026b2-a978-4f13-83a2-76d69b79ca58" alt="Slide 2">
           </div>
-          <div class="text">3년간 바리스타로 근무하며 음료 제조, 매장 관리, 고객 응대 및 직원 간 협업을 경험했습니다.</div>
+          <button class="next" onclick="changeSlide(1, 'carousel2')">&#10095;</button>
         </div>
-        <div class="section__list-item">
-          <div class="name">입시 학원</div>
-          <div class="project-info">
-            <p><strong>기간:</strong> 2019년 12월 - 2021년 4월</p>
-            <p><strong>역할:</strong> 행정직원</p>
+      <!-- 프로젝트 기간 및 사용기술 -->
+        <div class="project-info">
+          <p><strong>기간:</strong> 2024년 7월 - 2024년 8월</p>
+           <p><strong>사용 기술:</strong></p>
+          <div class="tech-stack">
+            <img src="https://img.shields.io/badge/java-007396?logo=java&logoColor=white">
+            <img src="https://img.shields.io/badge/spring-6DB33F?logo=spring&logoColor=white">
+            <img src="https://img.shields.io/badge/eclipse-2C2255?style=flat-square&logo=eclipse&logoColor=white">
+            <img src="https://img.shields.io/badge/tomcat-F8DC75?logo=apache-tomcat&logoColor=black">
+            <img src="https://img.shields.io/badge/mybatis-DC382D?logo=mybatis&logoColor=white"/>
+            <img src="https://img.shields.io/badge/hikaricp-007396?logo=java&logoColor=white">
+            <img src="https://img.shields.io/badge/maven-C71A36?logo=apache-maven&logoColor=white">
+            <img src="https://img.shields.io/badge/jsp-007396?logo=java&logoColor=white">
+            <img src="https://img.shields.io/badge/css3-1572B6?logo=css3&logoColor=white">
+            <img src="https://img.shields.io/badge/javascript-F7DF1E?logo=javascript&logoColor=black">
+            <img src="https://img.shields.io/badge/html5-E34F26?logo=html5&logoColor=white">
+            <img src="https://img.shields.io/badge/oracle-F80000?logo=oracle&logoColor=white">
           </div>
-          <div class="text">2년간 입시학원 행정실에 근무하며 학부모 상담, 학생 관리, 시간표 관리, 수업 관리, 교육청 공지 업데이트 및 공지 문서화 전달, 원회비와 학원 재정 관리를 담당했습니다.</div>
+
         </div>
+        <div class="text">SML(Spring in My Life)는 노인 지원 프로그램으로 노인에게 다양한 교육의 기회와 커뮤니티를 제공합니다. 저는 API를 통한 지도 내 위치 찾기 기능과 후원 결제 기능을 구현하였습니다. 지도는 Kakao Map API를 활용하였고 '키워드 검색','카테고리 검색','내 위치 중심 검색','검색 기록 저장'이 주요 기능입니다. 결제는 IamPort API를 활용하였고 '카카오페이 결제','결제 정보 저장'이 주요 기능입니다. 이 프로젝트를 통해 API의 활용도 능력을 키울 수 있었습니다. </div>
+        <a href="https://github.com/SML-SpringInMyLife/SML" target="_blank">GitHub 이동</a>
       </div>
-    </div>
-    <!-- Education 섹션 -->
-    <div class="section">
-      <div class="section__title">Education</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="name">[송파여성인력개발센터] Java & Spring 백엔드 개발자 과정</div>
-          <div class="project-info">
-            <p><strong>기간:</strong> 2024년 4월 - 2024년 9월</p>
-            <p><strong>학위:</strong> 수료</p>
+      <!-- 세 번째 프로젝트 -->
+      <div class="section__list-item">
+        <div class="name">JAVANOS</div>
+        <div class="carousel" id="carousel3">
+          <button class="prev" onclick="changeSlide(-1, 'carousel3')">&#10094;</button>
+          <div class="slides">
+            <img src="https://github.com/user-attachments/assets/448afc27-ba2b-45ca-ac69-2176241b4ef0" alt="Slide 1" class="active">
           </div>
-          <div class="text">Java&Spring을 통한 웹서비스 개발 과정 수료</div>
+          <button class="next" onclick="changeSlide(1, 'carousel3')">&#10095;</button>
         </div>
-        <div class="section__list-item">
-          <div class="name">[KDT] 한국직업개발원 - 빅데이터 분석가 과정</div>
-          <div class="project-info">
-            <p><strong>기간:</strong> 2023년 12월 - 2024년 2월</p>
-            <p><strong>학위:</strong> 수료</p>
+        <!-- 프로젝트 기간 및 사용기술 -->
+        <div class="project-info">
+          <p><strong>기간:</strong> 2024년 6월 - 2024년 7월</p>
+           <p><strong>사용 기술:</strong></p>
+          <div class="tech-stack">
+            <img src="https://img.shields.io/badge/java-007396?logo=java&logoColor=white">
+            <img src="https://img.shields.io/badge/eclipse-2C2255?style=flat-square&logo=eclipse&logoColor=white">
+            <img src="https://img.shields.io/badge/servlet-232F3E?logo=java&logoColor=white">
+            <img src="https://img.shields.io/badge/jsp-007396?logo=java&logoColor=white">
+            <img src="https://img.shields.io/badge/mybatis-DC382D?logo=mybatis&logoColor=white">
+            <img src="https://img.shields.io/badge/mysql-4479A1?logo=mysql&logoColor=white">
           </div>
-          <div class="text">Python을 활용한 데이터 분석과 UiPath를 활용한 업무 자동화 과정 수료</div>
         </div>
-        <div class="name">경남대학교 경영학과</div>
-          <div class="project-info">
-            <p><strong>기간:</strong> 2012년 3월 - 2016년 2월</p>
-            <p><strong>학위:</strong> 학사 졸업</p>
-          </div>
-          <div class="text">경남대학교 경영학과 졸업</div>
-        </div>
+        <div class="text">JAVANOS는 지하철 좌석 공유 플랫폼으로 서울 지하철을 이용하는 고객이 빈좌석을 발견했을 때 JAVANOS 회원에게 위치를 공유하여 빈좌석을 알려주는 시스템입니다. 그 외에도 분실물 센터, 커뮤니티 등 회원 간 소통 창구가 마련되어 있습니다. 저는 JAVANOS 에서 관리자 기능을 담당했고 커뮤니티 게시판 글 신고, 신고된 글 처리, 신고 당한 회원 계정 정지 및 복구 처리 기능을 구현했습니다.</div>
+        <a href="https://github.com/JAVANOS6/javanos" target="_blank">GitHub 이동</a>
       </div>
     </div>
   </div>
+</div>
+
+<!-- Experience 섹션 -->
+<div class="section">
+  <div class="section__title">Experience</div>
+  <div class="section__list">
+    <div class="section__list-item">
+      <div class="name">스타벅스</div>
+      <div class="project-info">
+        <p><strong>기간:</strong> 2021년 8월 - 2023년 12월</p>
+        <p><strong>역할:</strong> 바리스타</p>
+      </div>
+      <div class="text">3년간 바리스타로 근무하며 음료 제조, 매장 관리, 고객 응대 및 직원 간 협업을 경험했습니다.</div>
+    </div>
+    <div class="section__list-item">
+      <div class="name">입시 학원</div>
+      <div class="project-info">
+        <p><strong>기간:</strong> 2019년 12월 - 2021년 4월</p>
+        <p><strong>역할:</strong> 행정직원</p>
+      </div>
+      <div class="text">2년간 입시학원 행정실에 근무하며 학부모 상담, 학생 관리, 시간표 관리, 수업 관리, 교육청 공지 업데이트 및 공지 문서화 전달, 원회비와 학원 재정 관리를 담당했습니다.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Education 섹션 -->
+<div class="section">
+  <div class="section__title">Education</div>
+  <div class="section__list">
+    <div class="section__list-item">
+      <div class="name">[송파여성인력개발센터] Java & Spring 백엔드 개발자 과정</div>
+      <div class="project-info">
+        <p><strong>기간:</strong> 2024년 4월 - 2024년 9월</p>
+        <p><strong>학위:</strong> 수료</p>
+      </div>
+      <div class="text">Java&Spring을 통한 웹서비스 개발 과정 수료</div>
+    </div>
+    <div class="section__list-item">
+      <div class="name">[KDT] 한국직업개발원 - 빅데이터 분석가 과정</div>
+      <div class="project-info">
+        <p><strong>기간:</strong> 2023년 12월 - 2024년 2월</p>
+        <p><strong>학위:</strong> 수료</p>
+      </div>
+      <div class="text">Python을 활용한 데이터 분석과 UiPath를 활용한 업무 자동화 과정 수료</div>
+    </div>
+    <div class="name">경남대학교 경영학과</div>
+      <div class="project-info">
+        <p><strong>기간:</strong> 2012년 3월 - 2016년 2월</p>
+        <p><strong>학위:</strong> 학사 졸업</p>
+      </div>
+      <div class="text">경남대학교 경영학과 졸업</div>
+    </div>
+  </div>
+</div>
 </div>
 
 <!-- 슬라이드 스타일 -->
@@ -304,6 +307,19 @@ main_nav: true
   margin-right: 10px;
   vertical-align: middle;
 }
+
+/* Skills 섹션 스타일 */
+.section__list-item .name {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.section__list-item .text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 </style>
 
 <!-- 슬라이드 기능 자바스크립트 -->
