@@ -117,66 +117,57 @@ main_nav: true
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="section">
-    <div class="section__title">Skills</div>
-    <div class="skills">
-      <div class="skills__item">
-        <div class="left">
+    
+    <!-- Skills 섹션 -->
+    <div class="section">
+      <div class="section__title">Skills</div>
+      <div class="section__list">
+        <div class="section__list-item">
           <div class="name">Javascript</div>
         </div>
-        <div class="right"></div>
-      </div>
-      <div class="skills__item">
-        <div class="left">
+        <div class="section__list-item">
           <div class="name">CSS</div>
         </div>
-        <div class="right"></div>
+        <div class="section__list-item">
+          <div class="name">HTML</div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="section">
-    <div class="section__title">Experience</div>
-    <div class="section__list">
-      <div class="section__list-item">
-        <div class="left">
+    <!-- Experience 섹션 -->
+    <div class="section">
+      <div class="section__title">Experience</div>
+      <div class="section__list">
+        <div class="section__list-item">
           <div class="name">KlowdBox</div>
-          <div class="addr">San Fr, CA</div>
-          <div class="duration">Jan 2011 - Feb 2015</div>
+          <div class="project-info">
+            <p><strong>기간:</strong> Jan 2011 - Feb 2015</p>
+            <p><strong>역할:</strong> Fr developer</p>
+          </div>
+          <div class="text">did This and that</div>
         </div>
-        <div class="right">
-          <div class="name">Fr developer</div>
-          <div class="desc">did This and that</div>
-        </div>
-      </div>
-      <div class="section__list-item">
-        <div class="left">
+        <div class="section__list-item">
           <div class="name">Akount</div>
-          <div class="addr">San Monica, CA</div>
-          <div class="duration">Jan 2011 - Feb 2015</div>
-        </div>
-        <div class="right">
-          <div class="name">Fr developer</div>
-          <div class="desc">did This and that</div>
+          <div class="project-info">
+            <p><strong>기간:</strong> Jan 2011 - Feb 2015</p>
+            <p><strong>역할:</strong> Fr developer</p>
+          </div>
+          <div class="text">did This and that</div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="section">
-    <div class="section__title">Education</div>
-    <div class="section__list">
-      <div class="section__list-item">
-        <div class="left">
+    <!-- Education 섹션 -->
+    <div class="section">
+      <div class="section__title">Education</div>
+      <div class="section__list">
+        <div class="section__list-item">
           <div class="name">Sample Institute of Technology</div>
-          <div class="addr">San Fr, CA</div>
-          <div class="duration">Jan 2011 - Feb 2015</div>
-        </div>
-        <div class="right">
-          <div class="name">Fr developer</div>
-          <div class="desc">did This and that</div>
+          <div class="project-info">
+            <p><strong>기간:</strong> Jan 2011 - Feb 2015</p>
+            <p><strong>학위:</strong> Fr developer</p>
+          </div>
+          <div class="text">did This and that</div>
         </div>
       </div>
     </div>
