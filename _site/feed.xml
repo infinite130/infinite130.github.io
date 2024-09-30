@@ -5,9 +5,67 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Sep 2024 15:13:58 +0900</pubDate>
-    <lastBuildDate>Fri, 20 Sep 2024 15:13:58 +0900</lastBuildDate>
+    <pubDate>Mon, 30 Sep 2024 17:29:45 +0900</pubDate>
+    <lastBuildDate>Mon, 30 Sep 2024 17:29:45 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>이펙티브 자바</title>
+        <description>&lt;h2 id=&quot;목차별-정리&quot;&gt;목차별 정리&lt;/h2&gt; &lt;h3 id=&quot;5-generics-제네릭&quot;&gt;5. Generics (제네릭)&lt;/h3&gt; &lt;h4 id=&quot;item-26-원시-타입raw-types을-사용하지-마라&quot;&gt;Item 26: 원시 타입(raw types)을 사용하지 마라&lt;/h4&gt; &lt;p&gt;제네릭 타입이 도입된 이후로 원시 타입은 타입 안정성을 제공하지 않으므로 사용을 지양해야 합니다.&lt;/p&gt; &lt;h4 id=&quot;item-27-검증되지-않은-경고unchecked-warnings를-제거하라&quot;&gt;Item...</description>
+        <pubDate>Mon, 30 Sep 2024 10:00:00 +0900</pubDate>
+        <link>http://localhost:4000/books/2024/09/30/book-3.html</link>
+        <guid isPermaLink="true">http://localhost:4000/books/2024/09/30/book-3.html</guid>
+        
+        <category>book</category>
+        
+        
+        <category>books</category>
+        
+      </item>
+    
+      <item>
+        <title>의존성 주입 이해하기</title>
+        <description>&lt;h2 id=&quot;하드-코딩-방식-vs-의존성-주입-방식&quot;&gt;하드 코딩 방식 VS 의존성 주입 방식&lt;/h2&gt; &lt;h3 id=&quot;1-하드코딩-방식--클래스-수정-필요&quot;&gt;1. 하드코딩 방식 : 클래스 수정 필요&lt;/h3&gt; &lt;p&gt;&lt;strong&gt;하드코딩된 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SpellChecker&lt;/code&gt;&lt;/strong&gt;는 특정 사전 객체를 직접 사용하고 있으며 사전을 변경할 때마다 &lt;code...</description>
+        <pubDate>Mon, 30 Sep 2024 10:00:00 +0900</pubDate>
+        <link>http://localhost:4000/post/2024/09/30/DI.html</link>
+        <guid isPermaLink="true">http://localhost:4000/post/2024/09/30/DI.html</guid>
+        
+        <category>computer science</category>
+        
+        
+        <category>post</category>
+        
+      </item>
+    
+      <item>
+        <title>이펙티브 자바</title>
+        <description>&lt;h2 id=&quot;목차별-정리&quot;&gt;목차별 정리&lt;/h2&gt; &lt;h3 id=&quot;1-introduction&quot;&gt;1. Introduction&lt;/h3&gt; &lt;p&gt;자바 프로그래밍 언어와 핵심 라이브러리의 효과적인 사용 방법을 소개하는 장이다. 각 항목은 자바의 모범 사례를 통해 성능, 가독성, 유지보수성을 높이기 위한 규칙을 다루고 있음.&lt;/p&gt;...</description>
+        <pubDate>Fri, 27 Sep 2024 10:00:00 +0900</pubDate>
+        <link>http://localhost:4000/books/2024/09/27/book-2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/books/2024/09/27/book-2.html</guid>
+        
+        <category>book</category>
+        
+        
+        <category>books</category>
+        
+      </item>
+    
+      <item>
+        <title>협업에 필요한 git 기능들 사용해보기</title>
+        <description>&lt;h3 id=&quot;git-stash&quot;&gt;git stash&lt;/h3&gt;
+
+</description>
+        <pubDate>Mon, 23 Sep 2024 12:00:00 +0900</pubDate>
+        <link>http://localhost:4000/post/2024/09/23/git-%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC.html</link>
+        <guid isPermaLink="true">http://localhost:4000/post/2024/09/23/git-%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC.html</guid>
+        
+        <category>git</category>
+        
+        
+        <category>post</category>
+        
+      </item>
     
       <item>
         <title>[sideproject 05] Swagger API 문서화 하기</title>
@@ -25,8 +83,7 @@
     
       <item>
         <title>컴퓨터 밑바닥의 비밀</title>
-        <description>&lt;h4 id=&quot;책리뷰&quot;&gt;책리뷰&lt;/h4&gt;
-</description>
+        <description>&lt;h2 id=&quot;책리뷰&quot;&gt;책리뷰&lt;/h2&gt; &lt;blockquote&gt; &lt;p&gt;바퀴를 다시 발명하지 마라 (Don’t reinvent the wheel) 다른 사람이 작성한 훌륭한 프로그램이 있다면 직접 가져와서 사용하면 된다는 의미 &amp;gt; 하지만 어떻게 사용할건지에 대해서는 고민해야 함&lt;/p&gt; &lt;/blockquote&gt;...</description>
         <pubDate>Thu, 19 Sep 2024 10:00:00 +0900</pubDate>
         <link>http://localhost:4000/books/2024/09/19/book-1.html</link>
         <guid isPermaLink="true">http://localhost:4000/books/2024/09/19/book-1.html</guid>
@@ -93,67 +150,6 @@
         <guid isPermaLink="true">http://localhost:4000/post/2024/09/06/side-project-1.html</guid>
         
         <category>project</category>
-        
-        
-        <category>post</category>
-        
-      </item>
-    
-      <item>
-        <title>맥북에서 오라클 연결 오류 문제</title>
-        <description>&lt;h3 id=&quot;문제-상황&quot;&gt;문제 상황&lt;/h3&gt; &lt;p&gt;맥북에서 오라클 데이타베이스를 실행하면 계속 오류가 남 &lt;br /&gt; docker를 실행했다가 껐다가… oracle 이미지를 다운로드 했다가 삭제했다가… &lt;br /&gt; 하다가 &lt;br /&gt; arm 아키텍처를 지원하지 않아서란 문제를...</description>
-        <pubDate>Thu, 05 Sep 2024 10:00:00 +0900</pubDate>
-        <link>http://localhost:4000/post/2024/09/05/oracle-mac.html</link>
-        <guid isPermaLink="true">http://localhost:4000/post/2024/09/05/oracle-mac.html</guid>
-        
-        <category>computer science</category>
-        
-        
-        <category>post</category>
-        
-      </item>
-    
-      <item>
-        <title>What Is Docker?</title>
-        <description>&lt;h2 id=&quot;docker란-무엇인가&quot;&gt;Docker란 무엇인가&lt;/h2&gt; &lt;p&gt;Docker는 배포 방식이 가상 머신(VM) 배포에서 컨테이너 배포로 넘어가면서 오픈소스 플랫폼이다.&lt;/p&gt; &lt;p&gt;컨테이너는 애플리케이션의 코드, 라이브러리 및 기타 종속 구성 요소를 포함하는 소프트웨어 코드 패키지이다. 컨테이너화를 통해 애플리케이션을...</description>
-        <pubDate>Tue, 03 Sep 2024 10:00:00 +0900</pubDate>
-        <link>http://localhost:4000/post/2024/09/03/docker-study.html</link>
-        <guid isPermaLink="true">http://localhost:4000/post/2024/09/03/docker-study.html</guid>
-        
-        <category>computer science</category>
-        
-        
-        <category>post</category>
-        
-      </item>
-    
-      <item>
-        <title>What Is Git?</title>
-        <description>&lt;h2 id=&quot;git-이란-무엇인가&quot;&gt;Git 이란 무엇인가&lt;/h2&gt; &lt;blockquote&gt; &lt;p&gt;Git : VSC(Version Control System)의 한 종류 프로그램 버전 관리를 위한 툴 버전(version) : 프로그램의 일부 내용이 바뀌거나 새로운 기능이 추가되는 등 어떤 유의미한 변화가...</description>
-        <pubDate>Mon, 02 Sep 2024 12:00:00 +0900</pubDate>
-        <link>http://localhost:4000/post/2024/09/02/git-study.html</link>
-        <guid isPermaLink="true">http://localhost:4000/post/2024/09/02/git-study.html</guid>
-        
-        <category>git</category>
-        
-        
-        <category>post</category>
-        
-      </item>
-    
-      <item>
-        <title>맥북 단축키 모음</title>
-        <description>&lt;h4 id=&quot;크롬-개발자-모드-콘솔창-열기&quot;&gt;크롬 개발자 모드 콘솔창 열기&lt;/h4&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;option+command+i&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;단축키-모음&quot;&gt;단축키 모음&lt;/h3&gt;
-&lt;p&gt;rr&lt;/p&gt;
-</description>
-        <pubDate>Wed, 21 Aug 2024 12:00:00 +0900</pubDate>
-        <link>http://localhost:4000/post/2024/08/21/first-post.html</link>
-        <guid isPermaLink="true">http://localhost:4000/post/2024/08/21/first-post.html</guid>
-        
-        <category>test</category>
         
         
         <category>post</category>

@@ -7,13 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>What Is Git?</title>
-  <meta name="description" content="Git 이란 무엇인가">
+  <meta name="description" content="Last Update : 24.09.23">
   
 
   <!-- External libraries -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/.min.css">
+   <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/.min.css">-->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+ <!-- Rouge 구문 강조 스타일 추가 -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rouge/3.26.0/css/monokai.sublime.min.css">
 
   <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
   <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
@@ -97,6 +100,8 @@
 
 	
 
+	
+
 
       </ul>
     </nav>
@@ -136,7 +141,9 @@
 </section>
 
 <article class="post-content">
-  <h2 id="git-이란-무엇인가">Git 이란 무엇인가</h2>
+  <p>Last Update : 24.09.23</p>
+
+<h2 id="git-이란-무엇인가">Git 이란 무엇인가</h2>
 
 <blockquote>
   <p>Git : VSC(Version Control System)의 한 종류
@@ -389,6 +396,64 @@ merge후 불필요한 브랜치 삭제<br />
 
 <h4 id="원격저장소-프로젝트-저장하기">원격저장소 프로젝트 저장하기</h4>
 
+<h4 id="원격저장소-readmemd-추가해서-만들었을-때">원격저장소 readme.md 추가해서 만들었을 때</h4>
+<p>로컬저장소에서 new project를 만들고 readme.md가 추가된 원격저장소에 clone 안하고 업로드할때</p>
+
+<p>git branch 확인<br />
+<code class="language-plaintext highlighter-rouge">git branch</code></p>
+
+<p>branch가 없다면 main branch 생성<br />
+<code class="language-plaintext highlighter-rouge">git checkout -b main</code></p>
+
+<p>Git 원격 URL을 SSH로 변경(원격저장소에서 Code 누르면 SSH 주소 뜸)<br />
+<code class="language-plaintext highlighter-rouge">git remote set-url origin git@github.com:아이디/원격repo이름.git</code></p>
+
+<p>파일을 커밋<br />
+<code class="language-plaintext highlighter-rouge">git add .</code>
+<code class="language-plaintext highlighter-rouge">git commit -m "initial commit"</code></p>
+
+<p>원격 저장소로 푸시<br />
+<code class="language-plaintext highlighter-rouge">git push -u origin main</code></p>
+
+<h4 id="올리고-싶지-않은-파일이-원격저장소에-올라갔을-때-삭제하기">올리고 싶지 않은 파일이 원격저장소에 올라갔을 때 삭제하기</h4>
+
+<p>나의 경우는 아래 파일과 폴더가 원격저장소에 올라감</p>
+<blockquote>
+  <p>파일 : .gitignore, build.gradle, gradlew, gradlew.bat, settings.gradle
+폴더 : gradle/wrapper</p>
+</blockquote>
+
+<p>Git에서 해당 파일 제거<br />
+<code class="language-plaintext highlighter-rouge">git rm --cached .gitignore build.gradle gradlew gradlew.bat settings.gradle</code></p>
+
+<p>변경 사항 커밋<br />
+<code class="language-plaintext highlighter-rouge">git commit -m "Remove build files from tracking"</code></p>
+
+<p>원격 저장소에 푸시<br />
+<code class="language-plaintext highlighter-rouge">git push origin main</code></p>
+
+<p>폴더도 같은 형식으로 하면됨</p>
+
+<p>Git에서 해당 폴더 제거<br />
+<code class="language-plaintext highlighter-rouge">git rm -r --cached gradle/wrapper</code></p>
+
+<p>변경사항 커밋 &amp; 푸시 해주기</p>
+
+<p>그리고 .gitignore에 앞으로 업로드 하고 싶지 않은 파일명과 폴더명을 기록해준다</p>
+<blockquote>
+  <h3 id="git에서-제외할-파일">Git에서 제외할 파일</h3>
+  <p>.gitignore
+build.gradle
+gradlew
+gradlew.bat
+settings.gradle</p>
+</blockquote>
+
+<blockquote>
+  <h3 id="gradle-wrapper-폴더-제외">gradle wrapper 폴더 제외</h3>
+  <p>gradle/wrapper/</p>
+</blockquote>
+
 <h3 id="참고">참고</h3>
 <p>&lt;알코의 TOO MUCH 친절한 깃&amp;깃허브&gt;</p>
 
@@ -453,6 +518,8 @@ merge후 불필요한 브랜치 삭제<br />
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
 	
 
 	

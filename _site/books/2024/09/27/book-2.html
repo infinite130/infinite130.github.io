@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>이펙티브 자바</title>
+  <meta name="description" content="목차별 정리1. Introduction자바 프로그래밍 언어와 핵심 라이브러리의 효과적인 사용 방법을 소개하는 장이다. 각 항목은 자바의 모범 사례를 통해 성능, 가독성, 유지보수성을 높이기 위한 규칙을 다루고 있음.">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+   <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/.min.css">-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+ <!-- Rouge 구문 강조 스타일 추가 -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rouge/3.26.0/css/monokai.sublime.min.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/books/2024/09/27/book-2.html">
+	<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <span></span>
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+	<li class="nav-link"><a href="/books/">Books</a>
+	
+
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/portfolio/">Portfolio</a>
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">이펙티브 자바</h1>
+      <p class="info">by <strong></strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">September 27, 2024</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/posts/#books">Books</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h2 id="목차별-정리">목차별 정리</h2>
+<h3 id="1-introduction">1. Introduction</h3>
+<p>자바 프로그래밍 언어와 핵심 라이브러리의 효과적인 사용 방법을 소개하는 장이다. 각 항목은 자바의 모범 사례를 통해 성능, 가독성, 유지보수성을 높이기 위한 규칙을 다루고 있음.</p>
+
+<h3 id="2-creating-and-destroying-objects-객체-생성-및-소멸">2. Creating and Destroying Objects (객체 생성 및 소멸)</h3>
+<h4 id="item-1-생성자-대신-정적-팩토리-메서드를-고려하라">Item 1: 생성자 대신 정적 팩토리 메서드를 고려하라</h4>
+
+<p>정적 팩토리 메서드를 사용하는 것이 생성자보다 더 유리할 수 있다</p>
+
+<ol>
+  <li>정적 팩토리 메서드란?
+정적 팩토리 메서드는 생성자를 대신해서 객체를 반환하는 메서드이다. 즉, 클래스 외부에서 그 클래스의 인스턴스를 생성하는 방법으로, new 키워드를 사용하여 생성자를 호출하는 대신 클래스 내에서 정의된 정적 메서드를 호출하여 객체를 생성할 수 있다</li>
+</ol>
+
+<p>예를 들어 다음과 같은 정적 팩토리 메서드를 정의할 수 있다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Boolean</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Boolean</span> <span class="nf">valueOf</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">b</span> <span class="o">?</span> <span class="nc">Boolean</span><span class="o">.</span><span class="na">TRUE</span> <span class="o">:</span> <span class="nc">Boolean</span><span class="o">.</span><span class="na">FALSE</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>위의 메서드는 <code class="language-plaintext highlighter-rouge">Boolean</code> 객체를 반환하지만 <strong>새로운 객체를 생성하지 않고</strong> 기존에 있는 <code class="language-plaintext highlighter-rouge">Boolean.TRUE</code> 또는 <code class="language-plaintext highlighter-rouge">Boolean.FALSE</code> 객체를 반환함</p>
+
+<ol>
+  <li>정적 팩토리 메서드의 장점
+정적 팩토리 메서드가 생성자보다 유리할 수 있는 몇 가지 이유
+1) 메서드에 이름을 줄 수 있음
+생성자는 클래스 이름과 동일한 이름을 가질 수밖에 없지만 <strong>정적 팩토리 메서드는 더 설명적인 이름</strong>을 가질 수 있다. 이렇게 하면 객체를 생성하는 맥락을 명확하게 설명할 수 있어 가독성을 높일 수 있다.
+    <ul>
+      <li>예: <code class="language-plaintext highlighter-rouge">BigInteger(int, int, Random)</code> 생성자는 두 개의 <code class="language-plaintext highlighter-rouge">int</code> 값과 <code class="language-plaintext highlighter-rouge">Random</code> 객체를 받지만, 이게 어떤 역할을 하는지 명확하지 않다. 대신 <code class="language-plaintext highlighter-rouge">BigInteger.probablePrime()</code> 이라는 정적 팩토리 메서드를 사용하면 이 메서드가 어떤 일을 하는지 바로 알 수 있다.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>2) 객체를 매번 새로 생성하지 않아도 됨
+ 생성자는 호출될 때마다 새로운 객체를 반환하는 반면 정적 팩토리 메서드는 <strong><em>이미 생성된 객체를 재사용</em></strong>할 수 있다. 이 방식은 <strong><em>불변 객체</em></strong>에 특히 유용하다. 예를들어, <code class="language-plaintext highlighter-rouge">Boolean.valueOf(boolean)</code> 메서드는 <code class="language-plaintext highlighter-rouge">new Boolean()</code>을 호출하지 않고 미리 생성된 <code class="language-plaintext highlighter-rouge">TRUE</code>와 <code class="language-plaintext highlighter-rouge">FALSE</code> 객체를 반환한다.</p>
+
+<p>3) 서브타입 객체를 반환할 수 있음
+ 생성자는 항상 자신이 속한 클래스의 객체만 반환하지만 <strong><em>정적 팩토리 메서드는 자신이 속하지 않은 서브클래스 객체</em></strong>를 반환할 수 있다. 이는 더 유연한 객체 생성을 가능하게 한다.</p>
+
+<ul>
+  <li>예: <code class="language-plaintext highlighter-rouge">EnumSet</code> 클래스는 정적 팩토리 메서드를 통해 <code class="language-plaintext highlighter-rouge">RegularEnumSet</code> 또는 <code class="language-plaintext highlighter-rouge">JumboEnumSet</code> 같은 하위 클래스의 객체를 반환할 수 있다. 클라이언트는 이러한 세부 사항을 알 필요가 없으며 단순히 <code class="language-plaintext highlighter-rouge">EnumSet</code> 인터페이스만 알면 된다.</li>
+</ul>
+
+<p>4) 반환할 객체의 타입을 유연하게 변경 가능
+ 정적 팩토리 메서드는 입력 매개변수에 따라 반환할 객체의 타입을 유연하게 변경할 수 있다. 또한 객체를 생성하는 방식도 쉽게 변경할 수 있어 유지보수가 용이하다. 예를들어 특벙 버전에서는 A 클래스의 객체를 반환하고 다음 버전에서는 B 클래스 객체를 반환하도록 쉽게 변경할 수 있다.</p>
+
+<ol>
+  <li>예시 코드</li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">model</span><span class="o">;</span>
+
+    <span class="c1">// 정적 팩토리 메서드</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Car</span> <span class="nf">of</span><span class="o">(</span><span class="nc">String</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Car</span> <span class="n">car</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Car</span><span class="o">();</span>
+        <span class="n">car</span><span class="o">.</span><span class="na">model</span> <span class="o">=</span> <span class="n">model</span><span class="o">;</span>
+        <span class="k">return</span> <span class="n">car</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// 객체 생성 시</span>
+<span class="nc">Car</span> <span class="n">myCar</span> <span class="o">=</span> <span class="nc">Car</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"Tesla"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>위 예시에서 <code class="language-plaintext highlighter-rouge">Car</code> 클래스를 인스턴스화하는 대신 <code class="language-plaintext highlighter-rouge">Car.of()</code> 라는 정적 팩토리 메서드를 사용해 객체를 생성한다. 이는 코드의 가독성을 높이고 필요시 더 많은 로직을 포함할 수 있는 유연성을 제공함.</p>
+
+<h4 id="결론">결론</h4>
+<p>정적 팩토리 메서드는 다음과 같은 이유로 객체 생성에 있어서 더 나은 유연성을 제공한다.</p>
+<ol>
+  <li>메서드에 의미 있는 이름을 부여할 수 있어 가독성이 향상된다.</li>
+  <li>객체를 재사용하여 성능을 개선할 수 있다.</li>
+  <li>서브타임의 객체를 반환할 수 있어 더 유연한 구조를 제공한다.</li>
+  <li>객체 생성 로직을 쉽게 변경할 수 있어 유지보수가 용이하다.</li>
+</ol>
+
+<p>이러한 이유로 자바에서 생성자보다 정적 팩토리 메서드를 사용하는 것이 더 나은 경우가 자주 있다.</p>
+
+<h4 id="item-2-빌더-패턴을-고려하라">Item 2: 빌더 패턴을 고려하라</h4>
+<p>다수의 매개변수를 가진 생성자 대신, 가독성과 유연성을 높이는 빌더 패턴을 사용하는 것을 권장</p>
+
+<p>빌더 패턴은 다수의 매개변수를 가진 생성자나 정적 팩토리 메서드를 대체할 수 있는 패턴이다. 특히 <strong>필수가 아닌 선택적 매개변수가 많을 때</strong> 유용하다. 빌더 패턴은 객체의 가독성과 유연성을 높이는 데 큰 도움이 된다.</p>
+
+<ol>
+  <li>생성자의 한계</li>
+</ol>
+
+<p>많은 매개변수를 가진 생성자는 읽기 어렵고, 매개변수 순서를 헷걸리기 쉽다. 특히 선택적 매개변수가 많아질수록 이러한 문제는 더 심각해진다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NutritionFacts</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">servingSize</span><span class="o">;</span> <span class="c1">// 필수</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">servings</span><span class="o">;</span> <span class="c1">// 필수</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">calories</span><span class="o">;</span> <span class="c1">// 선택적</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">fat</span><span class="o">;</span> <span class="c1">// 선택적</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">sodium</span><span class="o">;</span> <span class="c1">// 선택적</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">carbohydrate</span><span class="o">;</span> <span class="c1">// 선택적</span>
+
+    <span class="kd">public</span> <span class="nf">NutritionFacts</span><span class="o">(</span><span class="kt">int</span> <span class="n">servingSize</span><span class="o">,</span> <span class="kt">int</span> <span class="n">servings</span><span class="o">,</span> <span class="kt">int</span> <span class="n">calories</span><span class="o">,</span> <span class="kt">int</span> <span class="n">fat</span><span class="o">,</span> <span class="kt">int</span> <span class="n">sodium</span><span class="o">,</span> <span class="kt">int</span> <span class="n">carbohydrate</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">servingSize</span> <span class="o">=</span> <span class="n">servingSize</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">servings</span> <span class="o">=</span> <span class="n">servings</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">calories</span> <span class="o">=</span> <span class="n">calories</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">fat</span> <span class="o">=</span> <span class="n">fat</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">sodium</span> <span class="o">=</span> <span class="n">sodium</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">fat</span> <span class="o">=</span> <span class="n">fat</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">sodium</span> <span class="o">=</span> <span class="n">sodium</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">carbohydrate</span> <span class="o">=</span> <span class="n">carbohydrate</span><span class="o">;</span>
+
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>위와 같이 많은 매개변수를 가진 생성자는 호출할 때 가독성이 떨어지며 실수를 유발할 가능성이 크다.</p>
+
+<ol>
+  <li>빌더 패턴의 사용</li>
+</ol>
+
+<p>빌더 패턴은 이러한 문제를 해결해 주는 구조로 매개변수의 유연한 조합이 가능하다. 각 매개변수를 <strong>직관적으로 설정</strong>할 수 있어 가독성을 높이고 코드 작성 시 실수를 줄일 수 있다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NutritionFacts</span> <span class="o">{</span>
+    <span class="kd">private</span>  <span class="kd">final</span> <span class="kt">int</span> <span class="n">servingSize</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">servings</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">calories</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">fat</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">sodium</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">carbohydrate</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Builder</span> <span class="o">{</span>
+
+        <span class="c1">// 필수 매개변수</span>
+        <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">servingSize</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">servings</span><span class="o">;</span>
+
+        <span class="c1">// 선택적 매개변수 - 기본값으로 초기화</span>
+        <span class="kd">private</span> <span class="kt">int</span> <span class="n">calories</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="kt">int</span> <span class="n">fat</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="kt">int</span> <span class="n">sodium</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="kt">int</span> <span class="n">carbohydrate</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+        <span class="kd">public</span> <span class="nf">Builder</span><span class="o">(</span><span class="kt">int</span> <span class="n">servingSize</span><span class="o">,</span> <span class="kt">int</span> <span class="n">servings</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">servingSize</span> <span class="o">=</span> <span class="n">servingSize</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">servings</span> <span class="o">=</span> <span class="n">servings</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="kd">public</span> <span class="nc">Builder</span> <span class="nf">calories</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span> <span class="n">calories</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span> <span class="k">return</span> <span class="k">this</span><span class="o">;</span> <span class="o">}</span>
+        <span class="kd">public</span> <span class="nc">Builder</span> <span class="nf">fat</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span> <span class="n">fat</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span> <span class="k">return</span> <span class="k">this</span><span class="o">;</span> <span class="o">}</span>
+        <span class="kd">public</span> <span class="nc">Builder</span> <span class="nf">sodium</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span> <span class="n">sodium</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span> <span class="k">return</span> <span class="k">this</span><span class="o">;</span> <span class="o">}</span>
+        <span class="kd">public</span> <span class="nc">Builder</span> <span class="nf">carbohydrate</span><span class="o">(</span><span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span> <span class="n">carbohydrate</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span> <span class="k">return</span> <span class="k">this</span><span class="o">;</span> <span class="o">}</span>
+
+        <span class="kd">public</span> <span class="nc">NutritionFacts</span> <span class="nf">build</span><span class="o">()</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">NutritionFacts</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="nf">NutritionFacts</span><span class="o">(</span><span class="nc">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">servingSize</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">servingSize</span><span class="o">;</span>
+        <span class="n">servings</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">servings</span><span class="o">;</span>
+        <span class="n">calories</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">calores</span><span class="o">;</span>
+        <span class="n">fat</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">fat</span><span class="o">;</span>
+        <span class="n">sodium</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">sodium</span><span class="o">;</span>
+        <span class="n">carbohydrate</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">carbohydrate</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>빌더 패턴을 사용하면 위처럼 코드의 가독성이 향상되며 필요한 매개변수만 명확하게 전달할 수 있다.</p>
+
+<ol>
+  <li>사용 예시</li>
+</ol>
+
+<p>빌더 패턴을 사용한 객체 생성은 다음과 같음</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">NutritionFacts</span> <span class="n">cocaCola</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NutritionFacts</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="mi">240</span><span class="o">,</span> <span class="mi">8</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">calories</span><span class="o">(</span><span class="mi">100</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">sodium</span><span class="o">(</span><span class="mi">35</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">carbohydrate</span><span class="o">(</span><span class="mi">27</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">buiild</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>이렇게 하면 선택적인 매개변수를 명확하게 추가할 수 있으며 가독성이 훨씬 좋아진다.</p>
+
+<ol>
+  <li>장점</li>
+</ol>
+
+<ul>
+  <li>가독성 향상: 각 매개변수에 대한 의미가 명확해진다.</li>
+  <li>유연성: 필수 매개변수와 선택적 매개변수를 구분하여 사용할 수 있다.</li>
+  <li>불변성: 빌더 패턴을 사용하면 객체가 불변(immutable) 상태를 유지하는 것이 더 쉬워진다.</li>
+</ul>
+
+<h4 id="item-3-private-생성자나-enum-타입으로-싱글턴-속성을-강화하라">Item 3: private 생성자나 enum 타입으로 싱글턴 속성을 강화하라</h4>
+
+<p>싱글턴 패턴은 <strong>클래스의 인스턴스가 오직 하나만 생성</strong>되도록 보장하는 패턴이다. 자바에서 이를 구현하는 방법에는 여러 가지가 있으며 그 중 <strong>private 생성자</strong>와 <strong>enum 타입</strong>을 사용하는 방법이 있다.</p>
+
+<ol>
+  <li>private 생성자를 사용하는 싱글턴 패턴</li>
+</ol>
+
+<p>가장 전통적인 싱글턴 구현 방법은 클래스의 생성자를 <code class="language-plaintext highlighter-rouge">private</code>으로 선언하고 클래스 내부에서 단 하나의 인스턴스를 생성하여 외부에서 접근할 수 있도록 하는 방식이다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Singleton</span> <span class="o">{</span>
+    <span class="c1">// 유일한 인스턴스를 생성</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Singleton</span> <span class="no">INSTANCE</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Singleton</span><span class="o">();</span>
+
+    <span class="c1">// private 생성자로 외부에서 인스턴스화 방지</span>
+    <span class="kd">private</span> <span class="nf">Singleton</span><span class="o">()</span> <span class="o">{}</span>
+
+    <span class="c1">// 인스턴스를 반환하는 정적 메서드</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Singleton</span> <span class="nf">getInstantce</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="no">INSTANCE</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>이 방식의 장점은 간단하다는 것이다. <code class="language-plaintext highlighter-rouge">Singleton.getInstance()</code>를 호출하면 항상 동일한 인스턴스가 반환된다.</p>
+
+<h4 id="단점">단점</h4>
+
+<ul>
+  <li>리플렉션 공격: 리플렉션을 사용하여 <code class="language-plaintext highlighter-rouge">private</code>생성자를 우회하여 새로운 인스턴스를 생성할 수 있다. 이를 방지하기 위해서는 <code class="language-plaintext highlighter-rouge">private</code> 생성자 내부에서 두 번째 인스턴스 생성을 막는 추가 로직이 필욯다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="nf">Singleton</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="no">INSTANCE</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="s">"이미 인스턴스가 존재합니다."</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>enum 타입을 사용하는 싱글턴 패턴</li>
+</ol>
+
+<p>자바에서 싱글턴을 구현하는 더 나은 방법은 enum 타입을 사용하는 것이다. 이 방식은 가장 간단하고 <strong>직렬화 및 리플렉션에 대한 보호 기능</strong>을 자동으로 제공하는 장점이 있다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="nc">Singleton</span> <span class="o">{</span>
+    <span class="no">INSTANCE</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">someMethod</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// 메서드 로직</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">enum</code>을 사용하면 JVM이 <strong>인스턴스의 유일성을 보장</strong>해준다. 또한 <strong>직렬화</strong>를 통해 싱글턴이 깨질 위험도 없다. 이는 자바의 직렬화 매커니즘에서 enum 타입이 특별한 처리를 받기 때문이다.</p>
+
+<h4 id="장점">장점</h4>
+
+<ul>
+  <li>리플렉션 안전: <code class="language-plaintext highlighter-rouge">enum</code> 타입은 리플렉션 공격으로부터 안전하다.</li>
+  <li>직렬화 자동 처리: enum은 기본적으로 직렬화가 지원되며 별도의 처리 없이 싱글턴 속성을 유지할 수 있다.</li>
+</ul>
+
+<ol>
+  <li>장단점 비교</li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th>방식</th>
+      <th>장점</th>
+      <th>단점</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>private 생성자</td>
+      <td>간단하고 사용하기 쉬움</td>
+      <td>리플렉션 공격에 취약, 직렬화 처리 필요</td>
+    </tr>
+    <tr>
+      <td>enum 타입</td>
+      <td>리플렉션 및 직렬화 문제 해결</td>
+      <td>싱글턴 외의 다른 용도로 사용하기 어려움</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>싱글턴 패턴의 문제점</li>
+</ol>
+
+<p>싱글턴 패턴은 그 자체로 유용하지만 <strong>테스트에서 유연성을 떨어뜨릴 수 있다</strong>는 단점도 있다. 예를들어 싱글턴 클래스의 메서드를 테스트할 때 매번 동일한 인스터스가 반환되기 때문에 상태를 변경해야 하는 테스트에서는 불편함이 따를 수 있다.</p>
+
+<p>결론:</p>
+<ul>
+  <li>private 생성자를 통한 구현은 전통적이지만 <strong>리플렉션</strong>이나 <strong>직렬화</strong>로 인해 싱글턴 속성을 깨트릴 수 있다.</li>
+  <li>enum 타입을 사용하는 방식은 가장 간단하고 안전한 방법으로 자바에서 싱글턴을 구현하는 최선의 방법으로 간주된다.</li>
+</ul>
+
+<h4 id="item-4-private-생성자로-인스턴스화를-막아라">Item 4: private 생성자로 인스턴스화를 막아라</h4>
+
+<p>인스턴스화를 원하지 않는 클래스는 <code class="language-plaintext highlighter-rouge">private</code> 생성자를 사용해 인스턴스화를 막아야 한다. 이 방법은 유틸리티 클래스나 상속을 통한 인스턴스를 금지할 때 유용하다.</p>
+
+<ol>
+  <li>
+    <p><strong>인스턴스화를 막기 위한 이유</strong>
+어떤 클래스는 그저 정적 메서드와 정적 필드만을 포함하고, 객체로 만들어질 필요가 없다. 이러한 클래스는 유틸리티 클래스라고 불리며, 예를 들어 <code class="language-plaintext highlighter-rouge">java.lang.Math</code>와 같은 클래스가 있다.</p>
+  </li>
+  <li>
+    <p><strong>private 생성자 사용</strong>
+생성자를 <code class="language-plaintext highlighter-rouge">private</code>으로 선언함으로써 외부에서 해당 클래스의 인스턴스를 만들지 못하도록 제한할 수 있다. 이로 인해 불필요한 객체 생성을 방지하고, 클래스의 사용 목적을 명확히 할 수 있다.</p>
+  </li>
+  <li>
+    <p><strong>예시 코드</strong></p>
+
+    <p>```java
+public class UtilityClass {
+    // private 생성자 선언
+    private UtilityClass() {
+        throw new UnsupportedOperationException(“이 클래스는 인스턴스화할 수 없습니다.”);
+    }</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static void utilityMethod() {
+    System.out.println("유틸리티 메서드 호출");
+} }```
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>위 예시에서 <code class="language-plaintext highlighter-rouge">UtilityClass</code>는 인스턴스화할 수 없으며, <code class="language-plaintext highlighter-rouge">utilityMethod()</code>와 같은 정적 메서드만 사용할 수 있다.</p>
+
+<ol>
+  <li><strong>추가적인 고려사항</strong></li>
+</ol>
+
+<ul>
+  <li>만약 생성자를 <code class="language-plaintext highlighter-rouge">private</code>으로 선언하지 않으면 컴파일러가 자동을 <strong>public</strong> 기본 생성자를 제공하므로, 반드시 명시적으로 <code class="language-plaintext highlighter-rouge">private</code> 생성자를 정의해야 한다.</li>
+  <li>상속을 통한 인스턴스화를 금지하기 위해서도 사용할 수 있다.</li>
+</ul>
+
+<h4 id="결론-1">결론</h4>
+<p>유틸리티 클래스와 같이 은스턴스화가 필요 없는 클래스는 <code class="language-plaintext highlighter-rouge">private</code> 생성자를 통해 인스턴스화를 막아야 한다. 이는 클래스의 의도를 명확히 하고 불필요한 객체 생성을 방지하여 코드의 안전성을 높이는 좋은 방법이다.</p>
+
+<h4 id="item-5-의존성-주입을-선호하라">Item 5: 의존성 주입을 선호하라</h4>
+
+<p>리소스를 직접 하드코딩하는 대신, <strong>의존성 주입(Dependency Injection, DI)</strong>을 통해 더 유연하고 재사용 가능한 코드를 작성할 수 있다. 의존성 주입은 클래스가 사용할 리소스나 객체를 외부에서 주입받는 방식으로, 특히 테스트 가능성과 코드의 확장성을 크게 개선한다.</p>
+
+<ol>
+  <li>
+    <p><strong>의존성 주입의 정의</strong>
+의존성 주입은 객체가 자신이 사용할 리소스를 직접 생성하지 않고 외부에서 주입받는 설계 패턴이다. 객체의 의존성을 외부에서 설정하고 주입함으로써 코드의 결합도를 낮추고 유지보수성을 높일 수 있다.</p>
+  </li>
+  <li><strong>의존성 주입의 장점</strong>
+    <ul>
+      <li><strong>유연성 증가:</strong> 의존성을 외부에서 주입받으므로, 필요에 따라 다른 구현체나 설정을 쉽게 바꿀 수 있다.</li>
+      <li><strong>테스트 용이성:</strong> 하드코딩된 의존성 대신 주입받은 의존성을 사용하면, 모의 객체(mock)를 주입하여 테스트를 쉽게 수행할 수 있다.</li>
+      <li><strong>재사용성 증가:</strong> 객체가 특정 구현에 종속되지 않으므로, 다양한 상황에서 동일한 클래스를 재사용할 수 있다.</li>
+    </ul>
+  </li>
+  <li><strong>의존성 주입의 방법</strong>
+    <ul>
+      <li><strong>생성자 주입:</strong> 객체 생성 시 필요한 의존성을 생성자를 통해 주입받는 방식</li>
+      <li><strong>세터 주입:</strong> 객체가 생성된 후에 세터 메서드를 통해 의존성을 주입받는 방식</li>
+      <li><strong>인터페이스 주입:</strong> 의존성을 주입받기 위한 인터페이스를 구현한 객체를 통해 의존성을 주입하는 방식</li>
+    </ul>
+  </li>
+  <li><strong>예시 코드</strong></li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">pulic</span> <span class="kd">class</span> <span class="nc">SpellChecker</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Lexicon</span> <span class="n">dictionary</span><span class="o">;</span>
+
+        <span class="c1">// 생성자 주입</span>
+        <span class="kd">public</span> <span class="nf">SpellChecker</span><span class="o">(</span><span class="nc">Lexicon</span> <span class="n">dictionary</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">dictionary</span> <span class="o">=</span> <span class="nc">Objects</span><span class="o">.</span><span class="na">requireNonNull</span><span class="o">(</span><span class="n">dictionary</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isValid</span><span class="o">(</span><span class="nc">String</span> <span class="n">word</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// 주입받은 사전 객체를 사용</span>
+            <span class="k">return</span> <span class="n">dictionary</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">word</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<p>위 코드에서 <code class="language-plaintext highlighter-rouge">SpellChecker</code> 클래스는 <code class="language-plaintext highlighter-rouge">Lexicon</code>이라는 의존성을 생성자 주입을 통해 받아 사용한다. 이렇게 하면 <code class="language-plaintext highlighter-rouge">Lexicon</code>의 다양한 구현체를 유연하게 사용할 수 있으며, 테스트 시에는 가짜 <code class="language-plaintext highlighter-rouge">Lexicon</code> 객체를 주입할 수 있다.</p>
+
+<p><strong>하드코딩 예시:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">SpellChecker</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Lexicon</span> <span class="n">dictionary</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Lexicon</span><span class="o">();</span> <span class="c1">// 의존성 하드코딩</span>
+
+        <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isValid</span><span class="o">(</span><span class="nc">String</span> <span class="n">word</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">dictionary</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">word</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<p>위 예시에서는 <code class="language-plaintext highlighter-rouge">Lexicon</code> 객체가 <code class="language-plaintext highlighter-rouge">SpellChecker</code> 클래스 내부에 하드코딩되어 있다. 만약 다른 종류의 <code class="language-plaintext highlighter-rouge">Lexicon</code> 객체를 사용해야 하거나, 테스트를 위해 가짜 <code class="language-plaintext highlighter-rouge">Lexicon</code> 객체를 사용하려고 한다면 코드를 수정해야 한다.</p>
+
+<ol>
+  <li><strong>하드코딩의 문제점</strong></li>
+</ol>
+
+<p>1) <strong>확장성과 변경에 취약</strong>
+만약 <code class="language-plaintext highlighter-rouge">SpellChecker</code> 클래스가 다른 사전(<code class="language-plaintext highlighter-rouge">Lexicon</code>) 구현을 사용해야 한다면, 하드코딩된 코드를 수정해야 한다. 이는 <strong>유지보수에 큰 비용</strong>을 발생시킨다. 특히 하드코딩된 객체가 여러 곳에서 사용된다면 모든 코드를 찾아 수정해야 한다.</p>
+
+<p>2) <strong>테스트 어려움</strong>
+하드코딩된 코드에서는 테스트 시 실제 객체를 사용해야 한다. 실제 객체는 외부 의존성이 많아 테스트 환경을 구성하기 어려울 수 있으며, 테스트 속도도 느려질 수 있다. 반면 의존성 주입을 사용하면 <strong>모의 객체(mock object)</strong>로 쉽게 대체할 수 있어 <strong>단위 테스트</strong> 작성이 훨씬 수월하다.</p>
+
+<p>3) <strong>재사용성 부족</strong>
+하드코딩된 클래스는 특정 구현에 고정되어 있으므로, 다른 상황에서 재사용하기 어렵다. 반면 의존성 주입을 사용하면 다양한 구현체를 주입하여 동일한 클래스를 다른 환경에서도 재사용할 수 있다.</p>
+
+<h4 id="결론-2">결론</h4>
+<p>의존성 주입은 코드의 <strong>유연성, 테스트 용이성, 재사용성</strong>을 크게 향상시키는 기법이다. 하드코딩된 리소스 대신 외부에서 의존성을 주입받음으로써 더 나은 소프트웨어 설계를 가능하게 한다.</p>
+
+<h4 id="item-6-불필요한-객체-생성을-피하라">Item 6: 불필요한 객체 생성을 피하라</h4>
+<p>불필요한 객체 생성을 피하고 재사용 가능한 객체를 활용하는 방법을 설명합니다.</p>
+
+<h4 id="item-7-오래된-객체-참조를-제거하라">Item 7: 오래된 객체 참조를 제거하라</h4>
+<p>메모리 누수를 방지하기 위해 사용되지 않는 객체 참조를 적절히 제거하는 방법을 다룹니다.</p>
+
+<h4 id="item-8-finalizer와-cleaner-사용을-피하라">Item 8: finalizer와 cleaner 사용을 피하라</h4>
+<p>자바에서 finalizer와 cleaner는 성능을 저하시킬 수 있으므로 피하는 것이 좋다는 설명입니다.</p>
+
+<h4 id="item-9-try-finally보다-try-with-resources를-사용하라">Item 9: try-finally보다 try-with-resources를 사용하라</h4>
+<p>리소스 해제를 위한 효율적이고 안전한 방법으로 try-with-resources를 사용하라고 권장합니다.</p>
+
+<h3 id="3-methods-common-to-all-objects-모든-객체에-공통적인-메서드">3. Methods Common to All Objects (모든 객체에 공통적인 메서드)</h3>
+<h4 id="item-10-equals를-재정의할-때-일반-규약을-따르라">Item 10: equals를 재정의할 때 일반 규약을 따르라</h4>
+<p>객체의 동등성을 비교하는 equals 메서드를 재정의할 때 지켜야 할 규칙을 설명합니다.</p>
+
+<h4 id="item-11-equals를-재정의할-때-hashcode도-항상-재정의하라">Item 11: equals를 재정의할 때 hashCode도 항상 재정의하라</h4>
+<p>equals를 재정의했다면 hashCode도 반드시 재정의해야 하는 이유와 방법을 설명합니다.</p>
+
+<h4 id="item-12-tostring을-항상-재정의하라">Item 12: toString을 항상 재정의하라</h4>
+<p>객체의 내용을 쉽게 확인할 수 있도록 toString 메서드를 재정의하는 것이 좋습니다.</p>
+
+<h4 id="item-13-clone을-주의해서-재정의하라">Item 13: clone을 주의해서 재정의하라</h4>
+<p>객체 복제를 위한 clone 메서드를 어떻게 올바르게 재정의할 수 있는지에 대해 설명합니다.</p>
+
+<h4 id="item-14-comparable을-구현하는-것을-고려하라">Item 14: Comparable을 구현하는 것을 고려하라</h4>
+<p>정렬 가능한 객체를 만들기 위해 Comparable 인터페이스를 구현하는 방법을 제안합니다.</p>
+
+<h3 id="4-classes-and-interfaces-클래스와-인터페이스">4. Classes and Interfaces (클래스와 인터페이스)</h3>
+<h4 id="item-15-클래스와-멤버의-접근성을-최소화하라">Item 15: 클래스와 멤버의 접근성을 최소화하라</h4>
+<p>캡슐화 원칙을 지키고, 필요한 경우에만 클래스나 멤버에 접근할 수 있도록 제한하는 방법을 설명합니다.</p>
+
+<h4 id="item-16-public-클래스에서는-접근자-메서드를-사용하고-public-필드를-사용하지-마라">Item 16: public 클래스에서는 접근자 메서드를 사용하고, public 필드를 사용하지 마라</h4>
+<p>공개 필드 대신 접근자 메서드를 사용하는 것이 왜 좋은지 설명합니다.</p>
+
+<h4 id="item-17-가변성을-최소화하라">Item 17: 가변성을 최소화하라</h4>
+<p>불변 객체의 장점과 이를 구현하는 방법을 설명합니다.</p>
+
+<h4 id="item-18-상속보다는-컴포지션을-사용하라">Item 18: 상속보다는 컴포지션을 사용하라</h4>
+<p>상속보다 유연성과 재사용성을 높이는 컴포지션을 선호하는 것이 좋다는 설명입니다.</p>
+
+<h4 id="item-19-상속을-고려한-설계와-문서화를-하거나-상속을-금지하라">Item 19: 상속을 고려한 설계와 문서화를 하거나, 상속을 금지하라</h4>
+<p>상속을 허용할지 말지, 그리고 상속할 경우 어떻게 설계하고 문서화할지에 대한 지침을 제공합니다.</p>
+
+<h4 id="item-20-추상-클래스보다-인터페이스를-선호하라">Item 20: 추상 클래스보다 인터페이스를 선호하라</h4>
+<p>유연한 설계를 위해 추상 클래스보다 인터페이스를 사용하는 것이 좋다고 권장합니다.</p>
+
+<h4 id="item-21-인터페이스는-영구적으로-설계하라">Item 21: 인터페이스는 영구적으로 설계하라</h4>
+<p>인터페이스를 설계할 때는 미래까지 고려해 신중하게 해야 한다고 설명합니다.</p>
+
+<h4 id="item-22-타입을-정의할-때만-인터페이스를-사용하라">Item 22: 타입을 정의할 때만 인터페이스를 사용하라</h4>
+<p>인터페이스는 오직 타입 정의를 위해 사용해야 하며, 그 외의 용도로는 피해야 한다고 권장합니다.</p>
+
+<h4 id="item-23-클래스-계층구조를-태그-클래스보다-선호하라">Item 23: 클래스 계층구조를 태그 클래스보다 선호하라</h4>
+<p>태그 클래스보다 계층구조를 활용한 설계가 더 나은 이유를 설명합니다.</p>
+
+<h4 id="item-24-비정적-멤버-클래스보다는-정적-멤버-클래스를-사용하라">Item 24: 비정적 멤버 클래스보다는 정적 멤버 클래스를 사용하라</h4>
+<p>정적 멤버 클래스가 비정적 클래스보다 효율적일 때가 많다고 설명합니다.</p>
+
+<h4 id="item-25-소스-파일을-한-개의-최상위-클래스만-담도록-하라">Item 25: 소스 파일을 한 개의 최상위 클래스만 담도록 하라</h4>
+<p>소스 파일에 여러 클래스를 담지 말고, 하나의 최상위 클래스만 포함하는 것이 좋습니다.</p>
+
+<h3 id="5-generics-제네릭">5. Generics (제네릭)</h3>
+<h4 id="item-26-원시-타입raw-types을-사용하지-마라">Item 26: 원시 타입(raw types)을 사용하지 마라</h4>
+<p>제네릭 타입이 도입된 이후로 원시 타입은 타입 안정성을 제공하지 않으므로 사용을 지양해야 합니다.</p>
+
+<h4 id="item-27-검증되지-않은-경고unchecked-warnings를-제거하라">Item 27: 검증되지 않은 경고(unchecked warnings)를 제거하라</h4>
+<p>컴파일러 경고를 무시하지 말고, 제네릭 타입을 올바르게 사용하여 경고를 제거해야 합니다.</p>
+
+<h4 id="item-28-배열보다는-리스트를-선호하라">Item 28: 배열보다는 리스트를 선호하라</h4>
+<p>배열은 타입 안전성을 보장하지 않으므로 리스트를 사용하는 것이 더 안전하고 유연합니다.</p>
+
+<h4 id="item-29-제네릭-타입을-선호하라">Item 29: 제네릭 타입을 선호하라</h4>
+<p>제네릭 타입을 사용하면 코드의 재사용성을 높이고 타입 안전성을 유지할 수 있습니다.</p>
+
+<h4 id="item-30-제네릭-메서드를-선호하라">Item 30: 제네릭 메서드를 선호하라</h4>
+<p>제네릭 메서드를 사용하여 메서드 호출 시 구체적인 타입을 지정할 수 있어 더욱 유연한 코드 작성이 가능합니다.</p>
+
+<h4 id="item-31-api-유연성을-높이기-위해-한정적-와일드카드를-사용하라">Item 31: API 유연성을 높이기 위해 한정적 와일드카드를 사용하라</h4>
+<p>와일드카드(? extends T, ? super T)를 사용하여 제네릭 클래스나 메서드의 유연성을 극대화할 수 있습니다.</p>
+
+<h4 id="item-32-제네릭과-가변인수varargs를-신중하게-조합하라">Item 32: 제네릭과 가변인수(varargs)를 신중하게 조합하라</h4>
+<p>가변인수를 제네릭과 함께 사용할 때는 신중해야 하며, @SafeVarargs 애너테이션을 사용하여 경고를 없앨 수 있습니다.</p>
+
+<h4 id="item-33-타입-안전-이질-컨테이너를-고려하라">Item 33: 타입 안전 이질 컨테이너를 고려하라</h4>
+<p>제네릭 타입을 사용하여 서로 다른 타입을 안전하게 담을 수 있는 컨테이너를 설계할 수 있습니다.</p>
+
+<h3 id="6-enums-and-annotations-열거형과-애너테이션">6. Enums and Annotations (열거형과 애너테이션)</h3>
+<h4 id="item-34-int-상수-대신-열거-타입을-사용하라">Item 34: int 상수 대신 열거 타입을 사용하라</h4>
+<p>타입 안전성을 보장하는 enum 타입을 사용하여 상수 값을 정의하는 것이 더 좋습니다.</p>
+
+<h4 id="item-35-ordinals순번-대신-인스턴스-필드를-사용하라">Item 35: ordinals(순번) 대신 인스턴스 필드를 사용하라</h4>
+<p>열거형의 순서를 기반으로 작업하는 것보다 인스턴스 필드를 사용하는 것이 더 안전합니다.</p>
+
+<h4 id="item-36-비트-필드-대신-enumset을-사용하라">Item 36: 비트 필드 대신 EnumSet을 사용하라</h4>
+<p>효율적이고 가독성이 높은 EnumSet을 활용하여 열거형의 집합을 다루는 것이 좋습니다.</p>
+
+<h4 id="item-37-ordinal-인덱싱-대신-enummap을-사용하라">Item 37: ordinal 인덱싱 대신 EnumMap을 사용하라</h4>
+<p>EnumMap을 사용하면 열거형을 키로 하는 매핑 작업을 더 효율적으로 수행할 수 있습니다.</p>
+
+<h4 id="item-38-인터페이스로-확장-가능한-열거-타입을-흉내내라">Item 38: 인터페이스로 확장 가능한 열거 타입을 흉내내라</h4>
+<p>열거형을 인터페이스로 확장하여 유연성을 높이는 방법을 설명합니다.</p>
+
+<h4 id="item-39-명명-패턴-대신-애너테이션을-선호하라">Item 39: 명명 패턴 대신 애너테이션을 선호하라</h4>
+<p>코드의 의미를 명확히 전달할 수 있도록 애너테이션을 활용하는 것이 좋습니다.</p>
+
+<h4 id="item-40-override-애너테이션을-일관되게-사용하라">Item 40: @Override 애너테이션을 일관되게 사용하라</h4>
+<p>메서드를 재정의할 때는 항상 @Override 애너테이션을 붙여 명시적으로 재정의했음을 알립니다.</p>
+
+<h4 id="item-41-타입-정의를-위해-마커-인터페이스를-사용하라">Item 41: 타입 정의를 위해 마커 인터페이스를 사용하라</h4>
+<p>마커 인터페이스는 클래스를 특정 타입으로 간주하게 만드는 간단하고 명료한 방법입니다.</p>
+
+<h3 id="7-lambdas-and-streams-람다와-스트림">7. Lambdas and Streams (람다와 스트림)</h3>
+<h4 id="item-42-익명-클래스보다-람다를-선호하라">Item 42: 익명 클래스보다 람다를 선호하라</h4>
+<p>람다는 코드의 가독성을 높이고 간결하게 표현할 수 있어 익명 클래스보다 더 유리합니다.</p>
+
+<h4 id="item-43-람다보다-메서드-참조를-선호하라">Item 43: 람다보다 메서드 참조를 선호하라</h4>
+<p>메서드 참조는 가독성을 높이고, 람다 표현식보다 더 직관적인 표현을 제공합니다.</p>
+
+<h4 id="item-44-표준-함수형-인터페이스를-선호하라">Item 44: 표준 함수형 인터페이스를 선호하라</h4>
+<p>표준 함수형 인터페이스(Predicate, Function, Consumer, Supplier)를 사용하여 일관성을 유지하고 코드의 재사용성을 높일 수 있습니다.</p>
+
+<h4 id="item-45-스트림은-신중하게-사용하라">Item 45: 스트림은 신중하게 사용하라</h4>
+<p>스트림 API는 강력하지만 모든 경우에 적합한 것은 아니므로, 적절한 상황에서만 사용하는 것이 좋습니다.</p>
+
+<h4 id="item-46-스트림에서는-부작용-없는-함수-사용을-선호하라">Item 46: 스트림에서는 부작용 없는 함수 사용을 선호하라</h4>
+<p>스트림 연산은 함수형 프로그래밍 패러다임을 따르므로, 부작용이 없는 함수를 사용해야 코드가 더욱 안전해집니다.</p>
+
+<h4 id="item-47-반환-타입으로-collection을-스트림보다-선호하라">Item 47: 반환 타입으로 Collection을 스트림보다 선호하라</h4>
+<p>컬렉션이 스트림보다 더 많은 유연성을 제공하며, 스트림은 컬렉션에서 쉽게 파생할 수 있습니다.</p>
+
+<h4 id="item-48-스트림을-병렬-처리할-때는-주의하라">Item 48: 스트림을 병렬 처리할 때는 주의하라</h4>
+<p>스트림의 병렬 처리는 매우 강력하지만, 잘못 사용하면 성능 문제나 예상치 못한 결과를 초래할 수 있으므로 주의가 필요합니다.</p>
+
+<h3 id="8-methods-메서드">8. Methods (메서드)</h3>
+<h4 id="item-49-매개변수의-유효성을-검사하라">Item 49: 매개변수의 유효성을 검사하라</h4>
+<p>메서드 매개변수가 유효한지 항상 검증해야 안정성과 오류를 방지할 수 있습니다.</p>
+
+<h4 id="item-50-필요한-경우-방어적-복사본을-만들어라">Item 50: 필요한 경우 방어적 복사본을 만들어라</h4>
+<p>외부로부터 받은 가변 객체는 방어적 복사본을 만들어 안전하게 사용해야 합니다.</p>
+
+<h4 id="item-51-메서드-시그니처를-신중히-설계하라">Item 51: 메서드 시그니처를 신중히 설계하라</h4>
+<p>명료하고 일관성 있는 메서드 시그니처를 설계하여 유지보수성을 높일 수 있습니다.</p>
+
+<h4 id="item-52-오버로딩은-신중하게-사용하라">Item 52: 오버로딩은 신중하게 사용하라</h4>
+<p>메서드 오버로딩은 가독성을 저해할 수 있으므로 신중하게 사용해야 합니다.</p>
+
+<h4 id="item-53-가변인수varargs는-신중하게-사용하라">Item 53: 가변인수(varargs)는 신중하게 사용하라</h4>
+<p>가변인수를 사용할 때는 불필요한 객체 생성을 피하고, 타입 안전성을 유지해야 합니다.</p>
+
+<h4 id="item-54-null이-아닌-빈-컬렉션이나-배열을-반환하라">Item 54: null이 아닌 빈 컬렉션이나 배열을 반환하라</h4>
+<p>null 대신 빈 컬렉션이나 배열을 반환하여 NullPointerException을 방지할 수 있습니다.</p>
+
+<h4 id="item-55-optional을-신중하게-반환하라">Item 55: Optional을 신중하게 반환하라</h4>
+<p>Optional은 반환 값이 없을 수 있는 경우에만 사용하고, 과도하게 사용하지 않도록 해야 합니다.</p>
+
+<h4 id="item-56-공개-api-요소에는-항상-문서화-주석을-작성하라">Item 56: 공개 API 요소에는 항상 문서화 주석을 작성하라</h4>
+<p>공개된 API는 항상 적절한 문서화 주석을 작성하여 사용자가 올바르게 사용할 수 있도록 해야 합니다.</p>
+
+<h3 id="9-general-programming-일반-프로그래밍">9. General Programming (일반 프로그래밍)</h3>
+<h4 id="item-57-지역-변수의-범위를-최소화하라">Item 57: 지역 변수의 범위를 최소화하라</h4>
+<p>변수의 생명 주기를 최소화하여 코드의 가독성과 유지보수성을 높입니다.</p>
+
+<h4 id="item-58-전통적인-for문보다-for-each-문을-선호하라">Item 58: 전통적인 for문보다 for-each 문을 선호하라</h4>
+<p>for-each 문을 사용하면 가독성이 높아지고 코드의 오류 가능성이 줄어듭니다.</p>
+
+<h4 id="item-59-라이브러리를-알고-사용하라">Item 59: 라이브러리를 알고 사용하라</h4>
+<p>표준 라이브러리를 최대한 활용하여, 중복된 코드를 피하고 성능을 높일 수 있습니다.</p>
+
+<h4 id="item-60-정확한-답이-필요할-때는-float와-double을-피하라">Item 60: 정확한 답이 필요할 때는 float와 double을 피하라</h4>
+<p>부동소수점 타입은 정확한 계산을 보장하지 않으므로, 필요한 경우 BigDecimal을 사용하는 것이 좋습니다.</p>
+
+<h4 id="item-61-박싱된-기본-타입보다는-기본-타입을-선호하라">Item 61: 박싱된 기본 타입보다는 기본 타입을 선호하라</h4>
+<p>기본 타입은 박싱된 타입보다 성능이 뛰어나므로, 가능하면 기본 타입을 사용하는 것이 좋습니다.</p>
+
+<h4 id="item-62-문자열은-다른-타입이-더-적합할-때-피하라">Item 62: 문자열은 다른 타입이 더 적합할 때 피하라</h4>
+<p>문자열은 데이터를 표현하는 데 적합하지 않을 수 있으므로, 적절한 타입을 사용하는 것이 중요합니다.</p>
+
+<h4 id="item-63-문자열-연결-성능에-주의하라">Item 63: 문자열 연결 성능에 주의하라</h4>
+<p>문자열 연결은 성능에 영향을 미칠 수 있으므로, StringBuilder를 사용하여 성능을 최적화할 수 있습니다.</p>
+
+<h4 id="item-64-객체는-인터페이스를-사용해-참조하라">Item 64: 객체는 인터페이스를 사용해 참조하라</h4>
+<p>객체는 구현 클래스가 아닌 인터페이스로 참조하여 코드의 유연성과 유지보수성을 높일 수 있습니다.</p>
+
+<h4 id="item-65-리플렉션보다-인터페이스를-선호하라">Item 65: 리플렉션보다 인터페이스를 선호하라</h4>
+<p>리플렉션은 성능과 안전성 문제가 있기 때문에, 가능하면 인터페이스를 사용하는 것이 더 좋습니다.</p>
+
+<h4 id="item-66-네이티브-메서드는-신중하게-사용하라">Item 66: 네이티브 메서드는 신중하게 사용하라</h4>
+<p>자바 네이티브 인터페이스(JNI)를 사용하는 것은 위험할 수 있으므로 신중하게 사용해야 합니다.</p>
+
+<h4 id="item-67-신중하게-최적화하라">Item 67: 신중하게 최적화하라</h4>
+<p>최적화는 성능에 필수적이지만, 오버엔지니어링을 피하고 필요할 때만 최적화를 해야 합니다.</p>
+
+<h4 id="item-68-일반적으로-통용되는-명명-규칙을-따르라">Item 68: 일반적으로 통용되는 명명 규칙을 따르라</h4>
+<p>코드의 가독성과 유지보수성을 위해 표준 명명 규칙을 따르는 것이 중요합니다.</p>
+
+<h3 id="10-exceptions-예외">10. Exceptions (예외)</h3>
+<h4 id="item-69-예외는-예외적인-상황에서만-사용하라">Item 69: 예외는 예외적인 상황에서만 사용하라</h4>
+<p>예외는 예외적인 상황에서만 사용하고, 일반적인 흐름에서는 사용하지 말아야 합니다.</p>
+
+<h4 id="item-70-복구-가능한-조건에는-체크드-예외를-프로그래밍-오류에는-런타임-예외를-사용하라">Item 70: 복구 가능한 조건에는 체크드 예외를, 프로그래밍 오류에는 런타임 예외를 사용하라</h4>
+<p>예외 상황에 따라 적절한 예외 유형을 사용해야 합니다.</p>
+
+<h4 id="item-71-불필요한-체크드-예외-사용을-피하라">Item 71: 불필요한 체크드 예외 사용을 피하라</h4>
+<p>체크드 예외는 꼭 필요한 경우에만 사용하고, 과도한 사용은 피해야 합니다.</p>
+
+<h4 id="item-72-표준-예외를-사용하라">Item 72: 표준 예외를 사용하라</h4>
+<p>표준 예외 클래스(IllegalArgumentException, NullPointerException 등)를 사용하여 일관된 예외 처리를 구현합니다.</p>
+
+<h4 id="item-73-추상화-수준에-맞는-예외를-던져라">Item 73: 추상화 수준에 맞는 예외를 던져라</h4>
+<p>예외는 추상화된 수준에 맞게 던져야 하며, 구체적인 구현 세부 사항을 포함하지 않도록 합니다.</p>
+
+<h4 id="item-74-각-메서드가-던지는-모든-예외를-문서화하라">Item 74: 각 메서드가 던지는 모든 예외를 문서화하라</h4>
+<p>메서드가 던질 수 있는 예외를 문서화하여 사용자가 올바르게 사용할 수 있도록 해야 합니다.</p>
+
+<h4 id="item-75-상세-메시지에-실패-정보를-담아라">Item 75: 상세 메시지에 실패 정보를 담아라</h4>
+<p>예외 발생 시, 예외 메시지에 오류의 원인을 파악할 수 있는 충분한 정보를 제공해야 합니다.</p>
+
+<h4 id="item-76-실패-원자성을-유지하라">Item 76: 실패 원자성을 유지하라</h4>
+<p>예외가 발생해도 객체 상태가 일관성을 유지하도록 설계해야 합니다.</p>
+
+<h4 id="item-77-예외를-무시하지-마라">Item 77: 예외를 무시하지 마라</h4>
+<p>예외를 무시하지 말고 적절히 처리해야 합니다.</p>
+
+<h3 id="11-concurrency-동시성">11. Concurrency (동시성)</h3>
+<h4 id="item-78-공유하는-가변-데이터에-접근할-때는-동기화하라">Item 78: 공유하는 가변 데이터에 접근할 때는 동기화하라</h4>
+<p>동시성 문제를 방지하기 위해 공유하는 가변 데이터에 접근할 때는 반드시 동기화해야 합니다.</p>
+
+<h4 id="item-79-과도한-동기화를-피하라">Item 79: 과도한 동기화를 피하라</h4>
+<p>과도한 동기화는 성능 문제를 일으킬 수 있으므로, 꼭 필요한 부분에만 적용해야 합니다.</p>
+
+<h4 id="item-80-스레드보다-실행자-태스크-스트림을-선호하라">Item 80: 스레드보다 실행자, 태스크, 스트림을 선호하라</h4>
+<p>직접적인 스레드 사용보다 Executor, 태스크, 또는 스트림을 사용하여 동시성을 관리하는 것이 더 효율적입니다.</p>
+
+<h4 id="item-81-wait와-notify보다는-동시성-유틸리티를-사용하라">Item 81: wait와 notify보다는 동시성 유틸리티를 사용하라</h4>
+<p>wait와 notify를 사용하는 대신, java.util.concurrent 패키지의 동시성 유틸리티를 활용하는 것이 더 안전합니다.</p>
+
+<h4 id="item-82-스레드-안전성을-문서화하라">Item 82: 스레드 안전성을 문서화하라</h4>
+<p>클래스가 스레드 안전성을 갖추고 있는지 여부를 명확히 문서화해야 합니다.</p>
+
+<h4 id="item-83-지연-초기화는-신중하게-사용하라">Item 83: 지연 초기화는 신중하게 사용하라</h4>
+<p>지연 초기화는 복잡성을 더할 수 있으므로 신중하게 사용해야 합니다.</p>
+
+<h4 id="item-84-스레드-스케줄러에-의존하지-마라">Item 84: 스레드 스케줄러에 의존하지 마라</h4>
+<p>스레드 스케줄러의 구현 방식에 의존하지 않고, 명확한 동시성 제어를 해야 합니다.</p>
+
+<h3 id="12-serialization-직렬화">12. Serialization (직렬화)</h3>
+<h4 id="item-85-자바-직렬화보다-대안을-선호하라">Item 85: 자바 직렬화보다 대안을 선호하라</h4>
+<p>자바 직렬화는 복잡하고 보안 취약점이 있을 수 있으므로, 직렬화를 사용해야 하는 상황이라면 가능한 대안 방식을 사용하는 것이 좋습니다. 예를 들어, JSON이나 XML을 사용한 직렬화가 더 안전하고 유연할 수 있습니다.</p>
+
+<h4 id="item-86-serializable을-구현할-때는-신중하라">Item 86: Serializable을 구현할 때는 신중하라</h4>
+<p>Serializable 인터페이스를 구현하면 클래스의 모든 인스턴스가 직렬화될 수 있습니다. 그러나 이 과정은 클래스의 설계와 성능에 큰 영향을 미칠 수 있으므로 매우 신중하게 접근해야 합니다.</p>
+
+<h4 id="item-87-커스텀-직렬화-형태를-사용하는-것을-고려하라">Item 87: 커스텀 직렬화 형태를 사용하는 것을 고려하라</h4>
+<p>자바의 기본 직렬화 형태는 성능에 문제를 일으킬 수 있으며, 보안에 취약할 수 있습니다. 필요하다면 커스텀 직렬화 방식을 사용하여 객체의 상태를 보다 안전하고 효율적으로 직렬화하는 것이 좋습니다.</p>
+
+<h4 id="item-88-readobject-메서드를-방어적으로-작성하라">Item 88: readObject 메서드를 방어적으로 작성하라</h4>
+<p>readObject 메서드는 외부에서 전달된 데이터를 바탕으로 객체를 복원하는 과정에서 보안 취약점이 생길 수 있습니다. 따라서 데이터를 신뢰할 수 없는 상태로 간주하고, 방어적인 프로그래밍 기법을 적용해야 합니다.</p>
+
+<h4 id="item-89-인스턴스-통제를-위해-readresolve보다-열거-타입을-선호하라">Item 89: 인스턴스 통제를 위해 readResolve보다 열거 타입을 선호하라</h4>
+<p>싱글턴이나 불변 객체를 직렬화하는 경우, readResolve 메서드를 사용하는 것보다 enum 타입을 사용하는 것이 더 안전하고 간결합니다.</p>
+
+<h4 id="item-90-직렬화된-인스턴스-대신-직렬화-프록시를-고려하라">Item 90: 직렬화된 인스턴스 대신 직렬화 프록시를 고려하라</h4>
+<p>직렬화 프록시 패턴을 사용하면 불변 객체나 객체의 상태를 더 안전하고 쉽게 직렬화할 수 있습니다. 이 패턴은 클래스의 직렬화 과정에서 발생할 수 있는 복잡한 문제를 해결하는 데 유용합니다.</p>
+
+
+</article>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading"></h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+	<li class="nav-link"><a href="/books/">Books</a>
+	
+
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/portfolio/">Portfolio</a>
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:skfo3219@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">skfo3219@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/infinite130" title="Follow me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">infinite130</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text"></p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

@@ -5,7 +5,6 @@ plugins:
 paginate: 5 # 한 페이지에 보여줄 포스트 수
 paginate_path: "/page/:num/"
 
-
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://infinite130.github.io" # the base hostname & protocol for your site
 email: skfo3219@gmail.com
@@ -16,3 +15,9 @@ social:
     username: infinite130
     url: https://github.com/infinite130
     desc: Follow me on GitHub
+
+# 마크다운 설정
+markdown: kramdown
+
+kramdown:
+  syntax_highlighter: rouge

@@ -78,7 +78,9 @@ DEPENDENCIES
   jekyll-paginate (~> 1.1)
   jekyll-paginate-v2
   jekyll-sitemap
+  kramdown (~> 2.3)
   kramdown-parser-gfm (~> 1.1)
+  rouge (~> 3.26)
 
 BUNDLED WITH
    2.4.22

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>이펙티브 자바</title>
+  <meta name="description" content="목차별 정리">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+   <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/.min.css">-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+ <!-- Rouge 구문 강조 스타일 추가 -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rouge/3.26.0/css/monokai.sublime.min.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/books/2024/09/30/book-3.html">
+	<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <span></span>
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+	<li class="nav-link"><a href="/books/">Books</a>
+	
+
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/portfolio/">Portfolio</a>
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">이펙티브 자바</h1>
+      <p class="info">by <strong></strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">September 30, 2024</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/posts/#books">Books</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h2 id="목차별-정리">목차별 정리</h2>
+
+<h3 id="5-generics-제네릭">5. Generics (제네릭)</h3>
+<h4 id="item-26-원시-타입raw-types을-사용하지-마라">Item 26: 원시 타입(raw types)을 사용하지 마라</h4>
+<p>제네릭 타입이 도입된 이후로 원시 타입은 타입 안정성을 제공하지 않으므로 사용을 지양해야 합니다.</p>
+
+<h4 id="item-27-검증되지-않은-경고unchecked-warnings를-제거하라">Item 27: 검증되지 않은 경고(unchecked warnings)를 제거하라</h4>
+<p>컴파일러 경고를 무시하지 말고, 제네릭 타입을 올바르게 사용하여 경고를 제거해야 합니다.</p>
+
+<h4 id="item-28-배열보다는-리스트를-선호하라">Item 28: 배열보다는 리스트를 선호하라</h4>
+<p>배열은 타입 안전성을 보장하지 않으므로 리스트를 사용하는 것이 더 안전하고 유연합니다.</p>
+
+<h4 id="item-29-제네릭-타입을-선호하라">Item 29: 제네릭 타입을 선호하라</h4>
+<p>제네릭 타입을 사용하면 코드의 재사용성을 높이고 타입 안전성을 유지할 수 있습니다.</p>
+
+<h4 id="item-30-제네릭-메서드를-선호하라">Item 30: 제네릭 메서드를 선호하라</h4>
+<p>제네릭 메서드를 사용하여 메서드 호출 시 구체적인 타입을 지정할 수 있어 더욱 유연한 코드 작성이 가능합니다.</p>
+
+<h4 id="item-31-api-유연성을-높이기-위해-한정적-와일드카드를-사용하라">Item 31: API 유연성을 높이기 위해 한정적 와일드카드를 사용하라</h4>
+<p>와일드카드(? extends T, ? super T)를 사용하여 제네릭 클래스나 메서드의 유연성을 극대화할 수 있습니다.</p>
+
+<h4 id="item-32-제네릭과-가변인수varargs를-신중하게-조합하라">Item 32: 제네릭과 가변인수(varargs)를 신중하게 조합하라</h4>
+<p>가변인수를 제네릭과 함께 사용할 때는 신중해야 하며, @SafeVarargs 애너테이션을 사용하여 경고를 없앨 수 있습니다.</p>
+
+<h4 id="item-33-타입-안전-이질-컨테이너를-고려하라">Item 33: 타입 안전 이질 컨테이너를 고려하라</h4>
+<p>제네릭 타입을 사용하여 서로 다른 타입을 안전하게 담을 수 있는 컨테이너를 설계할 수 있습니다.</p>
+
+<h3 id="6-enums-and-annotations-열거형과-애너테이션">6. Enums and Annotations (열거형과 애너테이션)</h3>
+<h4 id="item-34-int-상수-대신-열거-타입을-사용하라">Item 34: int 상수 대신 열거 타입을 사용하라</h4>
+<p>타입 안전성을 보장하는 enum 타입을 사용하여 상수 값을 정의하는 것이 더 좋습니다.</p>
+
+<h4 id="item-35-ordinals순번-대신-인스턴스-필드를-사용하라">Item 35: ordinals(순번) 대신 인스턴스 필드를 사용하라</h4>
+<p>열거형의 순서를 기반으로 작업하는 것보다 인스턴스 필드를 사용하는 것이 더 안전합니다.</p>
+
+<h4 id="item-36-비트-필드-대신-enumset을-사용하라">Item 36: 비트 필드 대신 EnumSet을 사용하라</h4>
+<p>효율적이고 가독성이 높은 EnumSet을 활용하여 열거형의 집합을 다루는 것이 좋습니다.</p>
+
+<h4 id="item-37-ordinal-인덱싱-대신-enummap을-사용하라">Item 37: ordinal 인덱싱 대신 EnumMap을 사용하라</h4>
+<p>EnumMap을 사용하면 열거형을 키로 하는 매핑 작업을 더 효율적으로 수행할 수 있습니다.</p>
+
+<h4 id="item-38-인터페이스로-확장-가능한-열거-타입을-흉내내라">Item 38: 인터페이스로 확장 가능한 열거 타입을 흉내내라</h4>
+<p>열거형을 인터페이스로 확장하여 유연성을 높이는 방법을 설명합니다.</p>
+
+<h4 id="item-39-명명-패턴-대신-애너테이션을-선호하라">Item 39: 명명 패턴 대신 애너테이션을 선호하라</h4>
+<p>코드의 의미를 명확히 전달할 수 있도록 애너테이션을 활용하는 것이 좋습니다.</p>
+
+<h4 id="item-40-override-애너테이션을-일관되게-사용하라">Item 40: @Override 애너테이션을 일관되게 사용하라</h4>
+<p>메서드를 재정의할 때는 항상 @Override 애너테이션을 붙여 명시적으로 재정의했음을 알립니다.</p>
+
+<h4 id="item-41-타입-정의를-위해-마커-인터페이스를-사용하라">Item 41: 타입 정의를 위해 마커 인터페이스를 사용하라</h4>
+<p>마커 인터페이스는 클래스를 특정 타입으로 간주하게 만드는 간단하고 명료한 방법입니다.</p>
+
+<h3 id="7-lambdas-and-streams-람다와-스트림">7. Lambdas and Streams (람다와 스트림)</h3>
+<h4 id="item-42-익명-클래스보다-람다를-선호하라">Item 42: 익명 클래스보다 람다를 선호하라</h4>
+<p>람다는 코드의 가독성을 높이고 간결하게 표현할 수 있어 익명 클래스보다 더 유리합니다.</p>
+
+<h4 id="item-43-람다보다-메서드-참조를-선호하라">Item 43: 람다보다 메서드 참조를 선호하라</h4>
+<p>메서드 참조는 가독성을 높이고, 람다 표현식보다 더 직관적인 표현을 제공합니다.</p>
+
+<h4 id="item-44-표준-함수형-인터페이스를-선호하라">Item 44: 표준 함수형 인터페이스를 선호하라</h4>
+<p>표준 함수형 인터페이스(Predicate, Function, Consumer, Supplier)를 사용하여 일관성을 유지하고 코드의 재사용성을 높일 수 있습니다.</p>
+
+<h4 id="item-45-스트림은-신중하게-사용하라">Item 45: 스트림은 신중하게 사용하라</h4>
+<p>스트림 API는 강력하지만 모든 경우에 적합한 것은 아니므로, 적절한 상황에서만 사용하는 것이 좋습니다.</p>
+
+<h4 id="item-46-스트림에서는-부작용-없는-함수-사용을-선호하라">Item 46: 스트림에서는 부작용 없는 함수 사용을 선호하라</h4>
+<p>스트림 연산은 함수형 프로그래밍 패러다임을 따르므로, 부작용이 없는 함수를 사용해야 코드가 더욱 안전해집니다.</p>
+
+<h4 id="item-47-반환-타입으로-collection을-스트림보다-선호하라">Item 47: 반환 타입으로 Collection을 스트림보다 선호하라</h4>
+<p>컬렉션이 스트림보다 더 많은 유연성을 제공하며, 스트림은 컬렉션에서 쉽게 파생할 수 있습니다.</p>
+
+<h4 id="item-48-스트림을-병렬-처리할-때는-주의하라">Item 48: 스트림을 병렬 처리할 때는 주의하라</h4>
+<p>스트림의 병렬 처리는 매우 강력하지만, 잘못 사용하면 성능 문제나 예상치 못한 결과를 초래할 수 있으므로 주의가 필요합니다.</p>
+
+<h3 id="8-methods-메서드">8. Methods (메서드)</h3>
+<h4 id="item-49-매개변수의-유효성을-검사하라">Item 49: 매개변수의 유효성을 검사하라</h4>
+<p>메서드 매개변수가 유효한지 항상 검증해야 안정성과 오류를 방지할 수 있습니다.</p>
+
+<h4 id="item-50-필요한-경우-방어적-복사본을-만들어라">Item 50: 필요한 경우 방어적 복사본을 만들어라</h4>
+<p>외부로부터 받은 가변 객체는 방어적 복사본을 만들어 안전하게 사용해야 합니다.</p>
+
+<h4 id="item-51-메서드-시그니처를-신중히-설계하라">Item 51: 메서드 시그니처를 신중히 설계하라</h4>
+<p>명료하고 일관성 있는 메서드 시그니처를 설계하여 유지보수성을 높일 수 있습니다.</p>
+
+<h4 id="item-52-오버로딩은-신중하게-사용하라">Item 52: 오버로딩은 신중하게 사용하라</h4>
+<p>메서드 오버로딩은 가독성을 저해할 수 있으므로 신중하게 사용해야 합니다.</p>
+
+<h4 id="item-53-가변인수varargs는-신중하게-사용하라">Item 53: 가변인수(varargs)는 신중하게 사용하라</h4>
+<p>가변인수를 사용할 때는 불필요한 객체 생성을 피하고, 타입 안전성을 유지해야 합니다.</p>
+
+<h4 id="item-54-null이-아닌-빈-컬렉션이나-배열을-반환하라">Item 54: null이 아닌 빈 컬렉션이나 배열을 반환하라</h4>
+<p>null 대신 빈 컬렉션이나 배열을 반환하여 NullPointerException을 방지할 수 있습니다.</p>
+
+<h4 id="item-55-optional을-신중하게-반환하라">Item 55: Optional을 신중하게 반환하라</h4>
+<p>Optional은 반환 값이 없을 수 있는 경우에만 사용하고, 과도하게 사용하지 않도록 해야 합니다.</p>
+
+<h4 id="item-56-공개-api-요소에는-항상-문서화-주석을-작성하라">Item 56: 공개 API 요소에는 항상 문서화 주석을 작성하라</h4>
+<p>공개된 API는 항상 적절한 문서화 주석을 작성하여 사용자가 올바르게 사용할 수 있도록 해야 합니다.</p>
+
+<h3 id="9-general-programming-일반-프로그래밍">9. General Programming (일반 프로그래밍)</h3>
+<h4 id="item-57-지역-변수의-범위를-최소화하라">Item 57: 지역 변수의 범위를 최소화하라</h4>
+<p>변수의 생명 주기를 최소화하여 코드의 가독성과 유지보수성을 높입니다.</p>
+
+<h4 id="item-58-전통적인-for문보다-for-each-문을-선호하라">Item 58: 전통적인 for문보다 for-each 문을 선호하라</h4>
+<p>for-each 문을 사용하면 가독성이 높아지고 코드의 오류 가능성이 줄어듭니다.</p>
+
+<h4 id="item-59-라이브러리를-알고-사용하라">Item 59: 라이브러리를 알고 사용하라</h4>
+<p>표준 라이브러리를 최대한 활용하여, 중복된 코드를 피하고 성능을 높일 수 있습니다.</p>
+
+<h4 id="item-60-정확한-답이-필요할-때는-float와-double을-피하라">Item 60: 정확한 답이 필요할 때는 float와 double을 피하라</h4>
+<p>부동소수점 타입은 정확한 계산을 보장하지 않으므로, 필요한 경우 BigDecimal을 사용하는 것이 좋습니다.</p>
+
+<h4 id="item-61-박싱된-기본-타입보다는-기본-타입을-선호하라">Item 61: 박싱된 기본 타입보다는 기본 타입을 선호하라</h4>
+<p>기본 타입은 박싱된 타입보다 성능이 뛰어나므로, 가능하면 기본 타입을 사용하는 것이 좋습니다.</p>
+
+<h4 id="item-62-문자열은-다른-타입이-더-적합할-때-피하라">Item 62: 문자열은 다른 타입이 더 적합할 때 피하라</h4>
+<p>문자열은 데이터를 표현하는 데 적합하지 않을 수 있으므로, 적절한 타입을 사용하는 것이 중요합니다.</p>
+
+<h4 id="item-63-문자열-연결-성능에-주의하라">Item 63: 문자열 연결 성능에 주의하라</h4>
+<p>문자열 연결은 성능에 영향을 미칠 수 있으므로, StringBuilder를 사용하여 성능을 최적화할 수 있습니다.</p>
+
+<h4 id="item-64-객체는-인터페이스를-사용해-참조하라">Item 64: 객체는 인터페이스를 사용해 참조하라</h4>
+<p>객체는 구현 클래스가 아닌 인터페이스로 참조하여 코드의 유연성과 유지보수성을 높일 수 있습니다.</p>
+
+<h4 id="item-65-리플렉션보다-인터페이스를-선호하라">Item 65: 리플렉션보다 인터페이스를 선호하라</h4>
+<p>리플렉션은 성능과 안전성 문제가 있기 때문에, 가능하면 인터페이스를 사용하는 것이 더 좋습니다.</p>
+
+<h4 id="item-66-네이티브-메서드는-신중하게-사용하라">Item 66: 네이티브 메서드는 신중하게 사용하라</h4>
+<p>자바 네이티브 인터페이스(JNI)를 사용하는 것은 위험할 수 있으므로 신중하게 사용해야 합니다.</p>
+
+<h4 id="item-67-신중하게-최적화하라">Item 67: 신중하게 최적화하라</h4>
+<p>최적화는 성능에 필수적이지만, 오버엔지니어링을 피하고 필요할 때만 최적화를 해야 합니다.</p>
+
+<h4 id="item-68-일반적으로-통용되는-명명-규칙을-따르라">Item 68: 일반적으로 통용되는 명명 규칙을 따르라</h4>
+<p>코드의 가독성과 유지보수성을 위해 표준 명명 규칙을 따르는 것이 중요합니다.</p>
+
+<h3 id="10-exceptions-예외">10. Exceptions (예외)</h3>
+<h4 id="item-69-예외는-예외적인-상황에서만-사용하라">Item 69: 예외는 예외적인 상황에서만 사용하라</h4>
+<p>예외는 예외적인 상황에서만 사용하고, 일반적인 흐름에서는 사용하지 말아야 합니다.</p>
+
+<h4 id="item-70-복구-가능한-조건에는-체크드-예외를-프로그래밍-오류에는-런타임-예외를-사용하라">Item 70: 복구 가능한 조건에는 체크드 예외를, 프로그래밍 오류에는 런타임 예외를 사용하라</h4>
+<p>예외 상황에 따라 적절한 예외 유형을 사용해야 합니다.</p>
+
+<h4 id="item-71-불필요한-체크드-예외-사용을-피하라">Item 71: 불필요한 체크드 예외 사용을 피하라</h4>
+<p>체크드 예외는 꼭 필요한 경우에만 사용하고, 과도한 사용은 피해야 합니다.</p>
+
+<h4 id="item-72-표준-예외를-사용하라">Item 72: 표준 예외를 사용하라</h4>
+<p>표준 예외 클래스(IllegalArgumentException, NullPointerException 등)를 사용하여 일관된 예외 처리를 구현합니다.</p>
+
+<h4 id="item-73-추상화-수준에-맞는-예외를-던져라">Item 73: 추상화 수준에 맞는 예외를 던져라</h4>
+<p>예외는 추상화된 수준에 맞게 던져야 하며, 구체적인 구현 세부 사항을 포함하지 않도록 합니다.</p>
+
+<h4 id="item-74-각-메서드가-던지는-모든-예외를-문서화하라">Item 74: 각 메서드가 던지는 모든 예외를 문서화하라</h4>
+<p>메서드가 던질 수 있는 예외를 문서화하여 사용자가 올바르게 사용할 수 있도록 해야 합니다.</p>
+
+<h4 id="item-75-상세-메시지에-실패-정보를-담아라">Item 75: 상세 메시지에 실패 정보를 담아라</h4>
+<p>예외 발생 시, 예외 메시지에 오류의 원인을 파악할 수 있는 충분한 정보를 제공해야 합니다.</p>
+
+<h4 id="item-76-실패-원자성을-유지하라">Item 76: 실패 원자성을 유지하라</h4>
+<p>예외가 발생해도 객체 상태가 일관성을 유지하도록 설계해야 합니다.</p>
+
+<h4 id="item-77-예외를-무시하지-마라">Item 77: 예외를 무시하지 마라</h4>
+<p>예외를 무시하지 말고 적절히 처리해야 합니다.</p>
+
+<h3 id="11-concurrency-동시성">11. Concurrency (동시성)</h3>
+<h4 id="item-78-공유하는-가변-데이터에-접근할-때는-동기화하라">Item 78: 공유하는 가변 데이터에 접근할 때는 동기화하라</h4>
+<p>동시성 문제를 방지하기 위해 공유하는 가변 데이터에 접근할 때는 반드시 동기화해야 합니다.</p>
+
+<h4 id="item-79-과도한-동기화를-피하라">Item 79: 과도한 동기화를 피하라</h4>
+<p>과도한 동기화는 성능 문제를 일으킬 수 있으므로, 꼭 필요한 부분에만 적용해야 합니다.</p>
+
+<h4 id="item-80-스레드보다-실행자-태스크-스트림을-선호하라">Item 80: 스레드보다 실행자, 태스크, 스트림을 선호하라</h4>
+<p>직접적인 스레드 사용보다 Executor, 태스크, 또는 스트림을 사용하여 동시성을 관리하는 것이 더 효율적입니다.</p>
+
+<h4 id="item-81-wait와-notify보다는-동시성-유틸리티를-사용하라">Item 81: wait와 notify보다는 동시성 유틸리티를 사용하라</h4>
+<p>wait와 notify를 사용하는 대신, java.util.concurrent 패키지의 동시성 유틸리티를 활용하는 것이 더 안전합니다.</p>
+
+<h4 id="item-82-스레드-안전성을-문서화하라">Item 82: 스레드 안전성을 문서화하라</h4>
+<p>클래스가 스레드 안전성을 갖추고 있는지 여부를 명확히 문서화해야 합니다.</p>
+
+<h4 id="item-83-지연-초기화는-신중하게-사용하라">Item 83: 지연 초기화는 신중하게 사용하라</h4>
+<p>지연 초기화는 복잡성을 더할 수 있으므로 신중하게 사용해야 합니다.</p>
+
+<h4 id="item-84-스레드-스케줄러에-의존하지-마라">Item 84: 스레드 스케줄러에 의존하지 마라</h4>
+<p>스레드 스케줄러의 구현 방식에 의존하지 않고, 명확한 동시성 제어를 해야 합니다.</p>
+
+<h3 id="12-serialization-직렬화">12. Serialization (직렬화)</h3>
+<h4 id="item-85-자바-직렬화보다-대안을-선호하라">Item 85: 자바 직렬화보다 대안을 선호하라</h4>
+<p>자바 직렬화는 복잡하고 보안 취약점이 있을 수 있으므로, 직렬화를 사용해야 하는 상황이라면 가능한 대안 방식을 사용하는 것이 좋습니다. 예를 들어, JSON이나 XML을 사용한 직렬화가 더 안전하고 유연할 수 있습니다.</p>
+
+<h4 id="item-86-serializable을-구현할-때는-신중하라">Item 86: Serializable을 구현할 때는 신중하라</h4>
+<p>Serializable 인터페이스를 구현하면 클래스의 모든 인스턴스가 직렬화될 수 있습니다. 그러나 이 과정은 클래스의 설계와 성능에 큰 영향을 미칠 수 있으므로 매우 신중하게 접근해야 합니다.</p>
+
+<h4 id="item-87-커스텀-직렬화-형태를-사용하는-것을-고려하라">Item 87: 커스텀 직렬화 형태를 사용하는 것을 고려하라</h4>
+<p>자바의 기본 직렬화 형태는 성능에 문제를 일으킬 수 있으며, 보안에 취약할 수 있습니다. 필요하다면 커스텀 직렬화 방식을 사용하여 객체의 상태를 보다 안전하고 효율적으로 직렬화하는 것이 좋습니다.</p>
+
+<h4 id="item-88-readobject-메서드를-방어적으로-작성하라">Item 88: readObject 메서드를 방어적으로 작성하라</h4>
+<p>readObject 메서드는 외부에서 전달된 데이터를 바탕으로 객체를 복원하는 과정에서 보안 취약점이 생길 수 있습니다. 따라서 데이터를 신뢰할 수 없는 상태로 간주하고, 방어적인 프로그래밍 기법을 적용해야 합니다.</p>
+
+<h4 id="item-89-인스턴스-통제를-위해-readresolve보다-열거-타입을-선호하라">Item 89: 인스턴스 통제를 위해 readResolve보다 열거 타입을 선호하라</h4>
+<p>싱글턴이나 불변 객체를 직렬화하는 경우, readResolve 메서드를 사용하는 것보다 enum 타입을 사용하는 것이 더 안전하고 간결합니다.</p>
+
+<h4 id="item-90-직렬화된-인스턴스-대신-직렬화-프록시를-고려하라">Item 90: 직렬화된 인스턴스 대신 직렬화 프록시를 고려하라</h4>
+<p>직렬화 프록시 패턴을 사용하면 불변 객체나 객체의 상태를 더 안전하고 쉽게 직렬화할 수 있습니다. 이 패턴은 클래스의 직렬화 과정에서 발생할 수 있는 복잡한 문제를 해결하는 데 유용합니다.</p>
+
+
+</article>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading"></h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+	<li class="nav-link"><a href="/books/">Books</a>
+	
+
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/portfolio/">Portfolio</a>
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:skfo3219@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">skfo3219@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/infinite130" title="Follow me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">infinite130</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text"></p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>
